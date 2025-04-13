@@ -4,46 +4,48 @@
 .container {
   display: flex;
   height: 100vh;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: #2c3e50;
+  min-height: 100vh;
+  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #355680;
   background-color: #fef9f3;
+  overflow: hidden;
 }
   
 .sidebar {
   width: 16rem;
   background-color: #f5efe3;
-  padding: 2rem 1.5rem;
+  padding: 4rem 2rem;
   border-right: 1px solid #e5e7eb;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
 }
   
   /* Sidebar header */
 .sidebarHeader {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   margin-bottom: 2rem;
 }
   
-.sidebarHeader__icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 9999px;
-  background-color: #2563eb;
-}
-  
 .sidebarHeader__title {
-  font-size: 1.25rem;
+  font-size: 2rem;
   font-weight: 600;
 }
   
 .newTripButton {
   width: 100%;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   margin-bottom: 2rem;
   border-radius: 9999px;
   border: 2px solid #2c3e50;
-  color: #2c3e50;
+  color: #355680;
   transition: all 0.2s;
+  font-weight: 800;
+  font-size: 1.5rem;
 }
   
 .newTripButton:hover {
@@ -54,40 +56,84 @@
 /* History */
 .historyHeading {
   margin-bottom: 1rem;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
   
 .historyList {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  color: #2c3e50;
+  gap: 0.75rem;
+  color: #355680;
+  list-style-type: none;
+  padding-left: 0;
 }
   
 .historyItem {
   cursor: pointer;
+  font-size: 1.25rem;
+  position: relative;
+  padding: 0.5rem 0;
+  z-index: 1;
+  font-weight: 500;
 }
   
-.historyItem:hover {
-  text-decoration: underline;
+.historyItem:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  right: -1rem;
+  bottom: 0;
+  background-color: rgba(209, 213, 219, 0.6);
+  border-radius: 2rem;
+  z-index: -1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .historyItemSelected {
+  position: relative;
+  z-index: 1;
+}
+
+.historyItemSelected::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  right: -1rem;
+  bottom: 0;
   background-color: rgba(209, 213, 219, 0.6);
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.375rem;
-  font-weight: 500;
+  border-radius: 2rem;
+  z-index: -1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Main content */
 .mainContent {
   flex: 1;
   padding: 2.5rem;
+  margin-top: 25vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-left: 16rem; /* Match sidebar width */
+  overflow-y: auto;
+}
+
+.mainContentWithMessages {
+  flex: 1;
+  padding: 2.5rem;
+  margin-top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-left: 16rem; /* Match sidebar width */
+  overflow-y: auto;
 }
 
 .mainHeading {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -107,6 +153,19 @@
   gap: 1rem;
 }
 
+.queryInputContainerWithHistory {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: fixed;
+  bottom: 2rem;
+  left: 16rem;
+  right: 0;
+  padding: 0 2.5rem;
+  z-index: 10;
+}
+
 .inputContainer {
   display: flex;
   width: 100%;
@@ -115,12 +174,23 @@
   border-radius: 0.75rem;
   overflow: hidden;
   background-color: #f9f1e6;
+  min-height: 3rem;
+  align-items: flex-end;
 }
 
 .inputField {
   flex: 1;
   padding: 0.75rem 1rem;
   background-color: transparent;
+  color: #2c3e50;
+  border: none;
+  resize: none;
+  min-height: 3rem;
+  max-height: 12rem;
+  overflow-y: auto;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .inputField:focus {
@@ -128,10 +198,18 @@
 }
 
 .sendButton {
-  padding: 0 1rem;
+  padding: 0;
+  width: 2.5rem;
+  height: 2.5rem;
   color: white;
-  background-color: #2c3e50;
+  background-color: #355680;
   transition: background-color 0.2s;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+  flex-shrink: 0;
 }
 
 .sendButton:hover {
@@ -141,21 +219,48 @@
 /* Buttons */
 .buttonGroup {
   display: flex;
-  gap: 1rem;
+  width: 100%;
+  max-width: 48rem;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
 
 .buttonCommon {
   background-color: #fdbb3d;
   color: #2c3e50;
+  font-size: 1.5rem;
   font-weight: 600;
   padding: 0.5rem 1.5rem;
   border-radius: 0.75rem;
   border: 2px solid #2c3e50;
   transition: background-color 0.2s;
+  flex: 1;
+  margin: 0 0.5rem;
+  text-align: center;
+}
+
+.buttonCommon:first-child {
+  margin-left: 0;
+}
+
+.buttonCommon:last-child {
+  margin-right: 0;
 }
 
 .buttonCommon:hover {
-  background-color: #fbbf24;
+  background-color: #FFDC9A;
+}
+
+/* Map Container */
+.mapContainer {
+  width: 100%;
+  max-width: 48rem;
+  height: 300px;
+  margin-top: 1.5rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 2px solid #2c3e50;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Messages */
@@ -166,24 +271,24 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-top: 0;
+  align-items: flex-start;
 }
 
 .messageUser {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: #355680;
 }
 
 .messageAssistant {
   display: flex;
   justify-content: flex-start;
-}
-
-.messageContentUser {
-  max-width: 80%;
-  border-radius: 0.5rem;
-  padding: 0.75rem;
-  background-color: #3b82f6;
-  color: white;
 }
 
 .messageContentAssistant {
