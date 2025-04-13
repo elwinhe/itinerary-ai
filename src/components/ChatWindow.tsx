@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import styles from './ChatWindow.module.css';
 
 interface Message {
   id: string;
@@ -28,53 +29,95 @@ export default function ChatWindow() {
     setInput('');
   };
 
+  async function handleSendMessage(userMessage: string) {
+    const res = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: userMessage }),
+    });
+    const data = await res.json();
+    // setChatState(data.response);
+  }
+
   return (
-    <div className="flex flex-col h-[600px] w-full max-w-2xl mx-auto bg-background rounded-lg shadow-lg">
-      {/* Chat Header */}
-      <div className="p-4 border-b border-gray-200">
-        <h2 className="text-xl font-semibold text-foreground">Chat Assistant</h2>
-      </div>
-
-      {/* Messages Container */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
-        {messages.map((message) => (
-          <div
-            key={message.id}
-            className={`flex ${
-              message.role === 'user' ? 'justify-end' : 'justify-start'
-            }`}
-          >
-            <div
-              className={`max-w-[80%] rounded-lg p-3 ${
-                message.role === 'user'
-                  ? 'bg-blue-500 text-white'
-                  : 'bg-gray-100 text-foreground'
-              }`}
-            >
-              {message.content}
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Input Area */}
-      <form onSubmit={handleSubmit} className="p-4 border-t border-gray-200">
-        <div className="flex space-x-2">
-          <input
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            placeholder="Type your message..."
-            className="flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-background text-foreground"
-          />
-          <button
-            type="submit"
-            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          >
-            Send
-          </button>
+    <div className={styles.container}>
+      {/* Sidebar */}
+      <aside className={styles.sidebar}>
+        <div className={styles.sidebarHeader}>
+          <div className={styles.sidebarHeader__icon} />
+          <span className={styles.sidebarHeader__title}>Itinerary.ai</span>
         </div>
-      </form>
+
+        <button className={styles.newTripButton}>New Trip</button>
+
+        <div>
+          <h3 className={styles.historyHeading}>History</h3>
+          <ul className={styles.historyList}>
+            <li className={styles.historyItem}>Italy 1/23–1/31</li>
+            <li className={styles.historyItem}>Tahoe 3/14–3/17</li>
+            <li className={styles.historyItem}>Random shit</li>
+            <li className={styles.historyItemSelected}>Selected trip</li>
+          </ul>
+        </div>
+      </aside>
+
+      {/* Main Content */}
+      <main className={styles.mainContent}>
+        <h1 className={styles.mainHeading}>
+          How can I help plan your trip today?
+        </h1>
+
+        {/* Query Input */}
+        <div className={styles.queryInputContainer}>
+          <div className={styles.inputContainer}>
+            <input
+              className={styles.inputField}
+              placeholder="Type query here"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+            />
+            <button
+              onClick={handleSubmit}
+              className={styles.sendButton}
+            >
+              →
+            </button>
+          </div>
+
+          {/* Buttons */}
+          <div className={styles.buttonGroup}>
+            {['Button 1', 'Button 2', 'Button 3'].map((text, i) => (
+              <button key={i} className={styles.buttonCommon}>
+                {text}
+              </button>
+            ))}
+          </div>
+
+          {/* Messages */}
+          <div className={styles.messagesContainer}>
+            {messages.map((message) => (
+              <div
+                key={message.id}
+                className={
+                  message.role === 'user'
+                    ? styles.messageUser
+                    : styles.messageAssistant
+                }
+              >
+                <div
+                  className={
+                    message.role === 'user'
+                      ? styles.messageContentUser
+                      : styles.messageContentAssistant
+                  }
+                >
+                  {message.content}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </main>
     </div>
   );
-} 
+}
