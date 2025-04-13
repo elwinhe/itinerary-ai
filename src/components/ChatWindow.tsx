@@ -241,7 +241,7 @@ export default function ChatWindow() {
 
           {/* Buttons */}
           <div className={styles.buttonGroup}>
-            {['Budget Mode', 'Date Picker', 'Special Events'].map((text, i) => (
+            {['Example Query 1', 'Example Query 2', 'Example Query 3'].map((text, i) => (
               <button key={i} className={styles.buttonCommon}>
                 {text}
               </button>
