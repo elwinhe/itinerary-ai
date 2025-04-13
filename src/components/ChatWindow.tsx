@@ -247,9 +247,6 @@ export default function ChatWindow() {
               </button>
             ))}
           </div>
-
-          {/* Google Maps Container */}
-          <div ref={mapRef} className={styles.mapContainer}></div>
         </div>
       </main>
     </div>
