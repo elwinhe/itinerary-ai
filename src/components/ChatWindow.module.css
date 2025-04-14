@@ -294,7 +294,7 @@
 .messageContentAssistant {
   max-width: 80%;
   border-radius: 0.5rem;
-  padding: 0.75rem;
+  padding: 0.75rem 3rem 0.75rem 0.75rem;
   background-color: var(--light-bg);
   color: var(--text);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
