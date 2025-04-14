@@ -1,116 +1,77 @@
-# Overview
-
-Bali is a tropical paradise offering a mix of cultural, natural, and adventurous experiences. From serene temples and cascading waterfalls to thrilling water sports and vibrant nightlife, Bali caters to all types of travelers.
-
-# Popular Attractions in Bali
-
-# 1. Tanah Lot Temple
-
+# Tanah Lot Temple
 - **Description:** Iconic cliffside temple surrounded by ocean views, markets, and gardens. Best visited during sunset for breathtaking scenery.
 - **Highlights:** Cultural experiences, souvenir shopping, panoramic views.
 - **Best For:** Photography and cultural exploration.
 - **Location:** Beraban, Kediri, Kabupaten Tabanan.
-- **Price Range:** Budget
 - **Seasonal Availability:** April – October
+- **Accessibiliy:** Limited wheelchair access due to uneven terrain.
+- **Peak Seasons:** Dry season (April – October).
+- **Price Range:** Budget (IDR 60,000 entry fee).
+- **Activities:** Photography, cultural exploration, souvenir shopping.
+- **Sustainability:** Local artisan markets, eco-friendly waste management practices.
+- **Rating:** 4.6/5
 
-# 2. Uluwatu Temple
-
+# Uluwatu Temple
 - **Description:** Perched atop a 70-meter cliff overlooking the Indian Ocean, this temple offers stunning views and daily Kecak dance performances at sunset.
 - **Highlights:** Scenic vistas, cultural performances, playful monkeys.
 - **Best For:** Cultural experiences and sunset photography.
 - **Location:** Pecatu, South Kuta.
-- **Price Range:** Budget
 - **Seasonal Availability:** April – October
+- **Accessibiliy:** Wheelchair access to some viewing areas; uneven paths elsewhere.
+- **Peak Seasons:** Dry season (April – October).
+- **Price Range:** Budget (IDR 50,000 entry fee).
+- **Activities:** Photography, cultural performances, sightseeing.
+- **Sustainability:** Solar-powered lighting and waste reduction programs.
+- **Rating:** 4.7/5
 
-# 3. Tegalalang Rice Terrace
-
+# Tegalalang Rice Terrace
 - **Description:** Verdant rice terraces offering idyllic paths for leisurely walks and photo opportunities. Learn about traditional Balinese rice cultivation methods.
 - **Highlights:** Scenic walks, cultural insights, photography.
 - **Best For:** Nature lovers and cultural enthusiasts.
 - **Location:** North of Ubud.
-- **Price Range:** Budget
 - **Seasonal Availability:** May – October
+- **Accessibiliy:** Partial wheelchair access; some steep paths require assistance.
+- **Peak Seasons:** Dry season (May – October).
+- **Price Range:** Budget (IDR 20,000 entry fee).
+- **Activities:** Scenic walks, photography, learning about rice farming.
+- **Sustainability:** Organic farming practices and local community initiatives.
+- **Rating:** 4.5/5
 
-# 4. Sacred Monkey Forest Sanctuary
-
+# Sacred Monkey Forest Sanctuary
 - **Description:** Wildlife park featuring free-roaming monkeys in a serene forest setting surrounded by ancient temples.
 - **Highlights:** Close encounters with monkeys, temple architecture, nature trails.
 - **Best For:** Families and nature enthusiasts.
 - **Location:** Ubud.
-- **Price Range:** Mid-range
 - **Seasonal Availability:** Year-round
+- **Accessibiliy:** Wheelchair accessible on main trails; uneven paths elsewhere. Sensory-friendly areas available for families with children.
+- **Peak Seasons:** Year-round with fewer crowds in the dry season (April – October).
+- **Price Range:** Mid-range (IDR 80,000 entry fee).
+- **Activities:** Wildlife observation, nature walks, cultural exploration.
+- **Sustainability:** Conservation programs for monkey habitats and forest preservation efforts.
+- **Rating:** 4.6/5
 
-# 5. Ulun Danu Beratan Temple
-
+# Ulun Danu Beratan Temple
 - **Description:** Known as the Floating Temple, this picturesque site sits on Lake Beratan surrounded by mountains. Ideal for tranquil exploration.
 - **Highlights:** Scenic lake views, gardens, nearby waterfalls.
 - **Best For:** Photography and peaceful exploration.
 - **Location:** Bedugul.
-- **Price Range:** Budget
 - **Seasonal Availability:** April – October
+- **Accessibiliy:** Wheelchair accessible in most areas; Braille maps available at entrances.
+- **Peak Seasons:** Dry season (April – October).
+- **Price Range:** Budget (IDR 50,000 entry fee).
+- **Activities:** Photography, sightseeing, garden walks.
+- **Sustainability:** Water conservation practices and local sourcing of materials for temple upkeep.
+- **Rating:** 4.7/5
 
-# 6. Besakih Great Temple
-
-- **Description:** The largest Hindu temple complex in Bali, nicknamed "The Mother Temple." Offers spectacular views of Mount Agung.
-- **Highlights:** Cultural exploration, panoramic views of the countryside.
-- **Best For:** History buffs and spiritual seekers.
-- **Location:** Near Mount Agung.
-- **Price Range:** Mid-range
-- **Seasonal Availability:** April – October
-
-# 7. Sekumpul Waterfall
-
-- **Description:** One of Bali’s most stunning waterfalls located in a lush jungle setting. Accessible via a challenging but rewarding hike.
-- **Highlights:** Hiking trails, swimming pools at the base of the falls.
-- **Best For:** Adventure seekers and nature lovers.
-- **Location:** Lemukih Village, Buleleng Regency.
-- **Price Range:** Mid-range
-- **Seasonal Availability:** May – October
-
-# Popular Activities in Bali
-
-# 1. Surfing at Uluwatu Beach
-
-- **Description:** Renowned for its world-class waves and cliffside restaurants overlooking the ocean. Ideal for surfers of all levels.
-- **Price Range:** Budget to Mid-range
-- **Seasonal Availability:** May – September
-
-# 2. Cooking Classes
-
-- **Description:** Learn to prepare authentic Balinese dishes like nasi goreng or sate lilit in hands-on workshops led by local chefs.
-- **Price Range:** Mid-range
-- **Seasonal Availability:** Year-round
-
-# 3. Whitewater Rafting on Ayung River
-
-- **Description:** Thrilling rafting experience through lush jungle landscapes with scenic waterfalls along the way.
-- **Price Range:** Mid-range
-- **Seasonal Availability:** April – October
-
-# 4. Mount Batur Sunrise Trekking
-
-- **Description:** Early morning trek to catch breathtaking sunrise views from the summit of Mount Batur.
-- **Price Range:** Mid-range
-- **Seasonal Availability:** April – October
-
-# 5. Yoga Retreats in Ubud
-
-- **Description:** Join yoga sessions amidst tranquil rice paddies or jungle settings for relaxation and rejuvenation.
-- **Price Range:** Mid-range to Luxury
-- **Seasonal Availability:** Year-round
-
-# 6. Scuba Diving at Blue Lagoon
-
-- **Description:** Explore vibrant coral reefs and marine life in one of Bali’s premier diving spots near Padang Bai.
-- **Price Range:** Mid-range to Luxury
-- **Seasonal Availability:** May – October
-
-# Best Time to Visit
-
-The best time to explore Bali’s attractions is during the dry season (April to October), when weather conditions are ideal for outdoor activities like hiking, swimming, and sightseeing.
-
-# Tips for Visiting Bali Attractions
-
-- Arrive early at popular sites like **Tanah Lot** or **Uluwatu Temple** to avoid crowds and enjoy peaceful exploration.
-- Wear comfortable shoes for hiking trails like **Sekumpul Waterfall** or **Mount Batur Sunrise Trekking**.
-- Respect local customs by wearing sarongs when visiting temples such as **Besakih** or **Ulun Danu Beratan**.
+# Besakih Great Temple
+- **Description:** The largest Hindu temple complex in Bali, nicknamed "The Mother Temple." It comprises 23 separate temples, including the main sanctuary, Pura Penataran Agung, and is perched on the slopes of Mount Agung, Bali's highest volcano. The temple is a sacred site for Balinese Hindus and a testament to spiritual and architectural heritage.
+- **Highlights:** Cultural exploration, panoramic views of Mount Agung, intricate stone carvings, traditional ceremonies.
+- **Best For:** History buffs, spiritual seekers, and cultural enthusiasts.
+- **Location:** Besakih countryside, Rendang sub-district, Karangasem Regency, Bali.
+- **Seasonal Availability:** April – October (dry season is ideal for exploration).
+- **Accessibiliy:** Not wheelchair accessible; steep stairs and uneven terrain make it challenging for visitors with mobility issues. However, cars can reach the lower levels for partial views of the temple complex.
+- **Peak Seasons:** Dry season (April – October), especially during major Hindu ceremonies like Galungan and Kuningan.
+- **Price Range:** Mid-range (IDR 150,000 entry fee; additional parking fees: IDR 10,000 for cars, IDR 5,000 for scooters).
+- **Activities:** Cultural exploration, photography, attending traditional Balinese ceremonies.
+- **Sustainability:** Recent revitalization efforts include eco-friendly construction practices using local volcanic rock and timber. The project emphasized cultural preservation and sustainable tourism development.
+- **Rating:** 4.8/5

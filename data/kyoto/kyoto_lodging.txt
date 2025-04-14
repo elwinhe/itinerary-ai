@@ -1,94 +1,90 @@
-# Overview
+# The Ritz-Carlton Kyoto
+- **Description:** A luxurious riverside hotel blending traditional Japanese aesthetics with modern luxury. Known for its serene atmosphere, spacious rooms, and world-class service, it offers stunning views of the Kamo River and Higashiyama Mountains.
+- **Highlights:** Michelin-starred restaurants, a tranquil spa featuring Kyoto-inspired treatments, a heated indoor pool, and tatami-style suites.
+- **Best For:** Couples, families, and business travelers seeking a refined stay in Kyoto.
+- **Location:** Kamogawa Nijo-Ohashi Hotori, Nakagyo Ward, Kyoto, Japan.
+- **Seasonal Availability:** Year-round
+- **Accessibiliy:** Wheelchair accessible; accessible rooms available with roll-in showers and wide doorways.
+- **Peak Seasons:** Spring (cherry blossoms) and autumn (foliage).
+- **Price Range:** Luxury (€€€€) – Rooms start at €1,000 per night.
+- **Activities:** Spa treatments, morning yoga by the river, cultural workshops like tea ceremonies and calligraphy.
+- **Sustainability:** Incorporates water-saving systems, locally sourced ingredients in dining options, and biodegradable toiletries.
+- **Rating:** 4.7/5
 
-Kyoto offers a wide range of accommodations, from luxurious riverside hotels to traditional ryokans and budget-friendly hostels. Whether you prefer staying near historic temples, bustling downtown streets, or serene bamboo forests, Kyoto has lodging options to suit every traveler’s needs. The city’s efficient public transportation system ensures easy access to attractions from all major lodging areas.
+# Hotel Granvia Kyoto
+- **Description:** A modern hotel located within the JR Kyoto Station complex offering convenience and comfort for travelers exploring Kyoto and nearby cities. The hotel features elegant rooms with panoramic city views and eco-friendly amenities.
+- **Highlights:** Direct access to trains and buses, a 1400-seat ballroom for events, an indoor pool, gym facilities, and multiple dining options.
+- **Best For:** Business travelers and tourists seeking convenience with luxury touches.
+- **Location:** JR Kyoto Station Building, Shimogyo Ward, Kyoto, Japan.
+- **Seasonal Availability:** Year-round
+- **Accessibiliy:** Fully wheelchair accessible; elevators connect directly to the station concourse.
+- **Peak Seasons:** Spring (March–May) for cherry blossoms and autumn (October–November) for foliage.
+- **Price Range:** Mid-range (€€€) – Rooms start at €150 per night.
+- **Activities:** Shopping at nearby malls, dining at on-site restaurants offering Japanese and international cuisine, fitness center access.
+- **Sustainability:** Uses water-saving systems, LED lighting, biodegradable toiletries; recycles food waste into compost used in local farming initiatives.
+- **Rating:** 4.5/5
 
-# Best Places to Stay in Kyoto
+# Toshiharu Ryokan
+- **Description:** A historic Japanese inn dating back to the Meiji era offering an authentic ryokan experience with tatami-matted rooms and tranquil gardens in central Kyoto. Registered as a cultural property, this ryokan immerses guests in traditional Japanese hospitality.
+- **Highlights:** Private onsen baths, traditional kaiseki meals served in-room, serene Japanese gardens viewed from select rooms.
+- **Best For:** Couples or small families seeking an authentic cultural experience in a peaceful setting.
+- **Location:** Gojo Station area, Shimogyo Ward, Kyoto, Japan.
+- **Seasonal Availability:** Year-round
+- **Accessibiliy:** Limited wheelchair access due to traditional architecture; some rooms feature private bathrooms for added convenience.
+- **Peak Seasons:** Spring (March–May) for cherry blossoms; autumn (October–November) for foliage.
+- **Price Range:** Luxury (€€€€) – Rooms start at €250 per night.
+- **Activities:** Relaxing in private baths; enjoying kaiseki meals; exploring nearby attractions like Higashiyama.
+- **Sustainability:** Uses locally sourced ingredients for meals; preserves cultural heritage through careful maintenance of its historic structure.
+- **Rating:** 4.6/5
 
-# 1. The Ritz-Carlton Kyoto
+# Ace Hotel Kyoto
+- **Description:** A stylish boutique hotel blending modern design with Japanese aesthetics, housed in a historic 1920s telephone office building. Ace Hotel Kyoto offers vibrant spaces, curated art installations, and convenient access to cultural landmarks.
+- **Highlights:** Rooftop bar with city views, Stumptown Coffee Roasters cafe, three distinct restaurants (Italian, Mexican, farm-to-table), curated vinyl record players in rooms, and a verdant courtyard.
+- **Best For:** Design enthusiasts, young travelers, and digital nomads seeking a lively stay in Kyoto's cultural center.
+- **Location:** Karasuma Oike area, Nakagyo Ward, Kyoto, Japan.
+- **Seasonal Availability:** Year-round
+- **Accessibiliy:** Fully wheelchair accessible; elevators connect all floors; pet-friendly accommodations available.
+- **Peak Seasons:** Spring (March–May) for cherry blossoms and autumn (October–November) for foliage.
+- **Price Range:** Mid-range (€€€) – Rooms start at €250 per night.
+- **Activities:** Exploring Nishiki Market and Kyoto Art Center nearby, enjoying live music performances at PIOPIKO bar, rooftop dining at Mr. Maurice's Italian restaurant.
+- **Sustainability:** Plastic-free amenities in rooms; locally sourced ingredients for dining options; energy-efficient lighting throughout the property.
+- **Rating:** 4.8/5
 
-- **Ambiance:** A luxurious riverside hotel offering spacious rooms with traditional Japanese design elements and world-class service.
-- **Highlights:** On-site Michelin-starred restaurants, spa facilities, and stunning views of the Kamo River.
-- **Price Range:** Luxury
-- **Address:** Kamogawa Nijo-Ohashi Hotori, Nakagyo Ward, Kyoto.
-- **Transportation Options:** Walking distance to downtown Kyoto; nearby bus stops and subway stations for easy access to attractions.
+# Rangetsu Ryokan
+- **Description:** A serene luxury ryokan located in the Arashiyama district near the bamboo forest and Ōi River. Rangetsu combines traditional Japanese hospitality with modern comforts for an unforgettable stay.
+- **Highlights:** Private hot spring baths with garden views, kaiseki meals featuring seasonal ingredients served in-room, tranquil Japanese gardens.
+- **Best For:** Couples and families seeking an authentic ryokan experience in a peaceful setting.
+- **Location:** Arashiyama area, Ukyo Ward, Kyoto, Japan.
+- **Seasonal Availability:** Year-round
+- **Accessibiliy:** Limited wheelchair access due to traditional architecture; rooms feature private bathrooms for added convenience.
+- **Peak Seasons:** Spring (March–May) for cherry blossoms and autumn (October–November) for foliage.
+- **Price Range:** Luxury (€€€€) – Rooms start at €400 per night.
+- **Activities:** Relaxing in private baths, enjoying multi-course kaiseki meals, exploring nearby attractions like the bamboo forest and monkey park.
+- **Sustainability:** Uses locally sourced ingredients for meals; preserves cultural heritage through careful maintenance of its historic structure.
+- **Rating:** 4.7/5
 
-# 2. Hotel Granvia Kyoto
+# 22 Pieces
+- **Description:** A boutique hotel offering apartment-style rooms with modern designs and spacious layouts near Kyoto Station. Perfect for families or groups seeking convenience and comfort during their stay in Kyoto.
+- **Highlights:** Fully-equipped kitchens in each room for long stays, loft-style rooms with terrace options, bicycle rentals for exploring nearby attractions like Aeon Mall and Kyoto Tower.
+- **Best For:** Families and groups looking for spacious accommodations near transportation hubs and shopping areas.
+- **Location:** 9-4 Higashikujo Muromachi, Minami-Ku, Kyoto, Japan.
+- **Seasonal Availability:** Year-round
+- **Accessibiliy:** Wheelchair accessible; laundry facilities available on-site.
+- **Peak Seasons:** Spring (March–May) for cherry blossoms; summer holidays (July–August).
+- **Price Range:** Mid-range (€€) – Rooms start at €150 per night.
+- **Activities:** Cooking in-room meals using fully equipped kitchens; exploring nearby attractions like Fushimi Inari Shrine or Nishiki Market.
+- **Sustainability:** Promotes eco-friendly practices such as minimal plastic use and energy-efficient lighting.
+- **Rating:** 4.9/5
 
-- **Ambiance:** A convenient hotel located inside Kyoto Station, offering spacious rooms and modern amenities.
-- **Highlights:** Indoor swimming pool, gym facilities, and direct access to trains and buses.
-- **Price Range:** Mid-range
-- **Address:** JR Kyoto Station Building, Shimogyo Ward, Kyoto.
-- **Transportation Options:** Direct access to JR trains, Shinkansen lines, and city buses; ideal for exploring nearby cities like Osaka or Nara.
-
-# 3. Toshiharu Ryokan
-
-- **Ambiance:** A traditional Japanese inn featuring tatami mat rooms and sliding paper doors for an authentic experience.
-- **Highlights:** Private onsen baths, kaiseki meals served in-room, and tranquil gardens.
-- **Price Range:** Luxury
-- **Address:** Gojo Station area, Shimogyo Ward, Kyoto.
-- **Transportation Options:** Walking distance to Gojo Subway Station; easy access to buses heading toward Higashiyama attractions.
-
-# 4. Ace Hotel Kyoto
-
-- **Ambiance:** A stylish boutique hotel blending modern design with Japanese aesthetics in a lively downtown location.
-- **Highlights:** Rooftop bar with city views, curated art installations throughout the property.
-- **Price Range:** Mid-range
-- **Address:** Karasuma Oike area, Nakagyo Ward, Kyoto.
-- **Transportation Options:** Close to Karasuma Oike Subway Station; easy transfers between the Karasuma Line and Tozai Line.
-
-# 5. Rangetsu Ryokan
-
-- **Ambiance:** A serene ryokan located in the Arashiyama district near the bamboo forest.
-- **Highlights:** Traditional multi-course meals (kaiseki), private hot spring baths with garden views.
-- **Price Range:** Luxury
-- **Address:** Arashiyama area, Ukyo Ward, Kyoto.
-- **Transportation Options:** Nearby train station for JR Sagano Line; bus stops offering direct routes to downtown Kyoto.
-
-# 6. 22 Pieces
-
-- **Ambiance:** A boutique hotel offering apartment-style rooms with modern designs and spacious layouts.
-- **Highlights:** Fully-equipped kitchens in each room for long stays; design-forward interiors.
-- **Price Range:** Mid-range
-- **Address:** Near Kyoto Station area.
-- **Transportation Options:** Walking distance to Kyoto Station; direct access to JR trains and city buses.
-
-# 7. FUFU Kyoto
-
-- **Ambiance:** A luxurious boutique hotel surrounded by lush greenery in Northern Higashiyama.
-- **Highlights:** Private onsen baths in each room; tranquil atmosphere perfect for relaxation.
-- **Price Range:** Luxury
-- **Address:** Northern Higashiyama area.
-- **Transportation Options:** Nearby subway stations on the Tozai Line; bus routes heading toward Gion and Kiyomizu Temple.
-
-# Local Transportation Options
-
-# Subway
-
-Kyoto has two subway lines:
-
-- **Karasuma Line:** Runs north-south through major areas like Kyoto Station and Imperial Palace.
-- **Tozai Line:** Runs east-west connecting attractions like Nijo Castle and Higashiyama District.
-
-Unlimited day passes are available for ¥600–¥1,200 depending on usage.
-
-# Buses
-
-Kyoto’s extensive bus network covers most major attractions. City buses are affordable (~¥230 per ride) but can get crowded during peak hours. Consider using express buses like the **Rakuraku Line** for faster travel between sites.
-
-# Trains
-
-JR trains are ideal for traveling beyond central Kyoto to areas like **Arashiyama** or **Fushimi Inari Shrine**. IC cards like **ICOCA** or **SUICA** are accepted on all train lines.
-
-# Cycling
-
-Kyoto’s flat terrain makes cycling a popular option for exploring neighborhoods like downtown or Arashiyama. Bike rentals are available at many locations starting at ¥1,500/day.
-
-# Best Time to Visit
-
-The best time to stay in Kyoto is during spring (March–May) or autumn (October–November), when cherry blossoms or autumn foliage enhance the beauty of the city’s surroundings.
-
-# Tips for Lodging in Kyoto
-
-- Book accommodations early during peak seasons like **cherry blossom** or **autumn foliage** season as hotels fill up quickly.
-- Choose lodging near **subway stations** or **bus stops** for convenient access to attractions across the city.
-- For a unique experience, stay at a **ryokan** like **Toshiharu Ryokan** or **Rangetsu Ryokan** to enjoy traditional Japanese hospitality.
+# FUFU Kyoto
+- **Description:** A luxurious boutique ryokan located near Nanzenji Temple offering private hot spring baths in each room and exclusive experiences like geisha performances and tea ceremonies in its garden teahouse. FUFU Kyoto blends ancient traditions with modern comforts for an exceptional stay.
+- **Highlights:** Private hinoki cypress tubs in rooms, kyo-kaiseki cuisine featuring seasonal ingredients at Restaurant Ioto, exclusive activities like ikebana flower arrangement lessons and zazen meditation guided by Nanzenji Temple's head monk.
+- **Best For:** Couples or solo travelers seeking a tranquil luxury retreat surrounded by nature and culture.
+- **Location:** Northern Higashiyama area near Murinan Garden and Lake Biwa Canal, Kyoto, Japan.
+- **Seasonal Availability:** Year-round
+- **Accessibiliy:** Limited wheelchair access due to traditional architecture; concierge available to assist with sightseeing arrangements.
+- **Peak Seasons:** Spring (March–May) for cherry blossoms; autumn (October–November) for foliage.
+- **Price Range:** Luxury (€€€€) – Rooms start at €450 per night.
+- **Activities:** Tea ceremonies, incense appreciation workshops, private yoga lessons in Murinan Garden.
+- **Sustainability:** Focuses on preserving cultural heritage through architecture; uses locally sourced ingredients for dining.
+- **Rating:** 4/5

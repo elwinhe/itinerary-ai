@@ -1,93 +1,90 @@
-# Overview
+# The Westin Resort Nusa Dua
+- **Description:** A luxurious beachfront resort offering spacious rooms, multiple pools, and exceptional service. The resort features eco-certified practices and caters to families, couples, and business travelers.
+- **Highlights:** Heavenly Spa by Westin™, Westin Family Kids Club, beachfront dining at Ikan Restaurant, and multiple outdoor pools with a waterslide.
+- **Best For:** Families, couples, and business travelers seeking a serene luxury retreat.
+- **Location:** Kawasan Pariwisata Nusa Dua BTDC Lot N-3, Nusa Dua, Bali.
+- **Seasonal Availability:** Year-round
+- **Accessibiliy:** Fully wheelchair accessible; family-friendly amenities include free infant beds and supervised childcare services.
+- **Peak Seasons:** Christmas, New Year's Eve, and summer months (June – August).
+- **Price Range:** Luxury (€€€€).
+- **Activities:** Beach yoga, paddleboarding, aqua aerobics, tennis, cycling tours, and cultural excursions to Ubud or Uluwatu.
+- **Sustainability:** Green Globe-certified; employs eco-friendly cleaning products, LED lighting, and recycling programs.
+- **Rating:** 4.6/5
 
-Bali offers a wide range of accommodations, from luxurious beachfront resorts to cozy boutique hotels and budget-friendly guesthouses. Whether you're staying in the trendy streets of Seminyak, the serene jungles of Ubud, or the laid-back beaches of Canggu, Bali has something for everyone. The island’s transportation options, including shuttle services and rental vehicles, make it easy to explore its many attractions.
+# Padma Resort Ubud
+- **Description:** A tranquil luxury retreat nestled in a lush jungle valley north of Ubud. The resort offers breathtaking views, world-class spa treatments, and family-friendly amenities.
+- **Highlights:** 89-meter infinity pool with panoramic jungle views, yoga classes, bamboo bridge walks, and a mini zoo for kids.
+- **Best For:** Couples seeking a romantic escape and families looking for a serene retreat.
+- **Location:** Banjar Carik, Desa Puhu Payangan, Ubud, Bali.
+- **Seasonal Availability:** Year-round
+- **Accessibiliy:** Wheelchair accessible; family-friendly facilities include warm pools suitable for toddlers and babies.
+- **Peak Seasons:** Summer months (June – August) and holiday seasons like Christmas.
+- **Price Range:** Luxury (€€€€).
+- **Activities:** Yoga classes, jungle trekking, cultural performances, cooking classes, and spa treatments.
+- **Sustainability:** Focuses on eco-friendly practices such as water conservation and locally sourced ingredients for its dining options.
+- **Rating:** 4.8/5
 
-# Best Places to Stay in Bali
+# Uma Karan
+- **Description:** A boutique hotel in Seminyak offering modern design and an intimate setting with lush gardens and a central pool. Ideal for travelers seeking tranquility near vibrant attractions.
+- **Highlights:** Spacious villa-style rooms with pool views, lush gardens, and attentive staff providing personalized service.
+- **Best For:** Couples or solo travelers looking for a quiet yet central location in Seminyak.
+- **Location:** Jalan Bidadari III No.8, Seminyak, Bali.
+- **Seasonal Availability:** Year-round
+- **Accessibiliy:** Limited wheelchair access; ground-floor rooms provide easier access to facilities.
+- **Peak Seasons:** High season in September; quieter in March during the low season.
+- **Price Range:** Budget (€€).
+- **Activities:** Relaxing by the pool, exploring nearby restaurants and boutiques on foot, or enjoying Seminyak Beach (1 km away).
+- **Sustainability:** Promotes eco-friendly practices such as minimal plastic use and energy-efficient lighting in rooms.
+- **Rating:** 4.5/5
 
-# 1. The Westin Resort Nusa Dua
+# The Kayon Jungle Resort
+- **Description:** A luxurious, eco-conscious jungle resort offering private villas and suites with breathtaking views of the rainforest. Designed for romance, relaxation, and rejuvenation, this adults-only property features world-class amenities and unparalleled service.
+- **Highlights:** Three-tier infinity pools overlooking the jungle canopy, Kepitu Restaurant, Wanna Jungle Bar & Pool, Serayu Spa with steam Jacuzzi, and a wedding chapel.
+- **Best For:** Honeymooners, couples, and those seeking a tranquil escape in nature.
+- **Location:** Banjar Bresela Village, Payangan, Gianyar Regency, Bali.
+- **Seasonal Availability:** Year-round
+- **Accessibiliy:** Not suitable for children under 15 or individuals with mobility issues due to steep terrain; private transfers available upon request.
+- **Peak Seasons:** July (summer holidays) and December (Christmas and New Year).
+- **Price Range:** Luxury (€€€€) – Average price $424–$437 per night.
+- **Activities:** Yoga classes, jungle trekking, spa treatments, cultural performances, and dining at Kepitu Restaurant.
+- **Sustainability:** Focuses on eco-friendly practices such as water conservation and locally sourced ingredients; awarded for its environmental responsibility.
+- **Rating:** 5/5
 
-- **Ambiance:** A luxurious beachfront resort with spacious rooms, multiple pools, and exceptional service.
-- **Highlights:** Free shuttle service to Bali Collection for shopping and dining, on-site spa.
-- **Price Range:** Luxury
-- **Address:** Kawasan Pariwisata Nusa Dua BTDC Lot N-3, Nusa Dua.
-- **Transportation Options:** Complimentary shuttle service within Nusa Dua; taxi services available for exploring further.
+# Lloyd's Inn Bali
+- **Description:** A minimalist boutique hotel located near Double Six Beach in Seminyak. Lloyd's Inn combines modern architecture with tropical greenery to create a serene oasis for travelers seeking tranquility amidst vibrant surroundings.
+- **Highlights:** Outdoor pool with Balinese slate slabs, rooftop terrace with hammocks, The Garden Café serving Indonesian and Asian cuisine, and weekly yoga classes at The Hideout lounge area.
+- **Best For:** Solo travelers, couples, and design enthusiasts looking for a budget-friendly yet stylish stay.
+- **Location:** Jalan Arjuna No.99x Double Six Beach Area, Seminyak 80361 Indonesia.
+- **Seasonal Availability:** Year-round
+- **Accessibiliy:** Wheelchair accessible; walking distance to Double Six Beach (400m).
+- **Peak Seasons:** July–August (summer holidays) and December (Christmas and New Year).
+- **Price Range:** Mid-range (€€) – Rooms start at €58 per night during low season.
+- **Activities:** Relaxing by the pool, yoga classes, exploring Seminyak's nightlife and beaches.
+- **Sustainability:** Promotes eco-friendly practices such as minimal plastic use and energy-efficient lighting; locally sourced ingredients for dining options.
+- **Rating:** 4.4/5
 
-# 2. Padma Resort Ubud
+# The Alena Resort
+- **Description:** A serene boutique resort surrounded by lush rice paddies and tropical gardens near Ubud. The Alena Resort offers spacious rooms and private pool villas designed with traditional Balinese architecture, complemented by modern amenities. Guests can enjoy personalized service in a tranquil setting ideal for relaxation and cultural exploration.
+- **Highlights:** Infinity pool with panoramic views, Paras Ayu Spa offering wellness treatments, Perantenan Restaurant serving Balinese and international cuisine, traditional Balinese cooking classes, and complimentary yoga sessions.
+- **Best For:** Couples, honeymooners, and families seeking a peaceful retreat close to Ubud's cultural landmarks.
+- **Location:** Banjar Silungan Lodtunduh Gianyar Regency, Ubud, Bali.
+- **Seasonal Availability:** Year-round
+- **Accessibiliy:** Wheelchair accessible; complimentary shuttle service to Ubud center available throughout the day.
+- **Peak Seasons:** July–August (summer holidays) and December (Christmas and New Year).
+- **Price Range:** Mid-range (€€€) – Rooms start at €120 per night during low season.
+- **Activities:** Yoga classes, cooking workshops, spa treatments, themed dining nights with Balinese cultural performances, and guided rice paddy walks.
+- **Sustainability:** Focuses on eco-friendly practices such as water conservation, locally sourced ingredients for dining, and preserving rare Balinese flowers in its gardens.
+- **Rating:** 4.9/5
 
-- **Ambiance:** A tranquil retreat surrounded by lush jungles with infinity pools and luxury amenities.
-- **Highlights:** Shuttle service to Ubud center, yoga classes, and spa facilities.
-- **Price Range:** Luxury
-- **Address:** Banjar Carik, Desa Puhu Payangan, Ubud.
-- **Transportation Options:** Complimentary shuttle to Ubud center; car rentals available for day trips.
-
-# 3. Uma Karan
-
-- **Ambiance:** A small boutique hotel with modern design located near Seminyak’s vibrant streets.
-- **Highlights:** Intimate setting with a pool and friendly staff.
-- **Price Range:** Budget
-- **Address:** Jalan Bidadari III No.8, Seminyak.
-- **Transportation Options:** Walking distance to Seminyak’s main attractions; taxis and motorbike rentals nearby.
-
-# 4. The Kayon Jungle Resort
-
-- **Ambiance:** A luxurious jungle resort offering private villas with infinity pools and breathtaking views.
-- **Highlights:** Shuttle service to Ubud center; fine dining restaurants on-site.
-- **Price Range:** Luxury
-- **Address:** Banjar Bresela Village Payangan Gianyar Regency.
-- **Transportation Options:** Complimentary shuttle to Ubud; private transfers available upon request.
-
-# 5. Lloyd’s Inn Bali
-
-- **Ambiance:** A minimalist boutique hotel located near Double Six Beach in Seminyak.
-- **Highlights:** Modern design with an outdoor pool and rooftop terrace.
-- **Price Range:** Mid-range
-- **Address:** Jalan Arjuna No.99x Double Six Beach Area Seminyak.
-- **Transportation Options:** Walking distance to Double Six Beach; taxis and ride-hailing apps available.
-
-# 6. The Alena Resort
-
-- **Ambiance:** A serene resort offering spacious rooms and villas surrounded by rice paddies near Ubud.
-- **Highlights:** Shuttle service to Ubud center; traditional Balinese cooking classes available on-site.
-- **Price Range:** Mid-range
-- **Address:** Banjar Silungan Lodtunduh Gianyar Regency Ubud.
-- **Transportation Options:** Complimentary shuttle service to Ubud center; bike rentals available.
-
-# 7. The Haven Bali Seminyak
-
-- **Ambiance:** A stylish hotel located in the heart of Seminyak with access to a private beach club.
-- **Highlights:** Shuttle service to the beach club; spacious rooms with modern amenities.
-- **Price Range:** Mid-range
-- **Address:** Jalan Raya Seminyak No.500 Bali.
-- **Transportation Options:** Complimentary shuttle service to the beach club; taxis readily available.
-
-# Local Transportation Options
-
-# Shuttle Services
-
-Many resorts in Bali offer complimentary shuttle services to nearby attractions or town centers like **Ubud** or **Seminyak**. These services are convenient for short trips but may require advance booking.
-
-# Taxis
-
-Metered taxis are widely available in tourist areas like **Kuta** and **Seminyak**. Ride-hailing apps such as **Grab** and **Gojek** are also popular and affordable options for getting around.
-
-# Car Rentals
-
-Renting a car is a great option for families or groups traveling together. Cars can be rented with or without a driver. Prices start at IDR 300,000 per day without a driver.
-
-# Motorbike Rentals
-
-For solo travelers or couples looking for flexibility, motorbike rentals are an affordable option starting at IDR 70,000 per day. Helmets are required by law.
-
-# Kura-Kura Bus
-
-The **Kura-Kura Bus** is a tourist-friendly shuttle service connecting major areas like **Kuta**, **Seminyak**, **Nusa Dua**, and **Ubud**. Tickets start at IDR 20,000 per trip.
-
-# Best Time to Visit
-
-The best time to stay in Bali is during the dry season (April–October), when weather conditions are ideal for outdoor activities like beach visits and jungle trekking.
-
-# Tips for Lodging in Bali
-
-- Book accommodations early during peak seasons like **July–August** or **December holidays** as hotels fill up quickly.
-- Choose lodging near your preferred activities — **Seminyak** for nightlife or **Ubud** for cultural experiences.
-- Check if your hotel offers **complimentary shuttles** or **airport transfers** for added convenience.
+# The Haven Bali Seminyak
+- **Description:** A stylish 4-star hotel located in the heart of Seminyak offering contemporary accommodations with access to a private beach club. The Haven Bali Seminyak combines modern elegance with tropical charm, making it an ideal choice for leisure travelers looking to explore Bali's vibrant nightlife and beaches.
+- **Highlights:** Two swimming pools, ATMA Spa with wellness packages, Sabeen Restaurant & Bar serving international cuisine, Lemon Cello Restaurant offering Italian dishes, and a private beach club just 10 minutes away.
+- **Best For:** Couples, families, and business travelers seeking a central location with modern amenities
+- **Location:** Jalan Raya Seminyak No.500, Seminyak, Bali.
+- **Seasonal Availability:** Year-round
+- **Accessibiliy:** Wheelchair accessible; complimentary shuttle service to the beach club is available daily.
+- **Peak Seasons:** July–August (summer holidays) and December (Christmas and New Year).
+- **Price Range:** Mid-range (€€) – Rooms start at €85 per night during low season.
+- **Activities:** Relaxing at the pool or spa, enjoying themed dining nights like BBQ events at Sabeen Restaurant, exploring Seminyak's shopping streets, or spending time at the private beach club.
+- **Sustainability:** Implements eco-friendly practices such as energy-efficient lighting, water-saving systems in rooms, and sourcing local ingredients for its restaurants.
+- **Rating:** 4.2/5

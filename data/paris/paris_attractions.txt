@@ -1,110 +1,142 @@
-# Overview
+# Seine River Cruise
+- **Description**: Take a leisurely cruise along the Seine River to see iconic landmarks like the Eiffel Tower and Notre-Dame Cathedral from a unique perspective.
+- **Highlights**: Iconic landmarks, sunset views, relaxing ambiance
+- **Best For**: Sightseeing, romantic evenings, photography
+- **Location**: Various departure points along the Seine River, including Port de la Bourdonnais
+- **Seasonal Availability**: April – October
+- **Accessibility**: Wheelchair accessible boats available; audio guides provided in multiple languages
+- **Peak Seasons**: Summer evenings for sunset cruises (June – August)
+- **Price Range**: Mid-range (€15–€25 per ticket)
+- **Activities**: Sightseeing, photography, romantic evenings on the water
+- **Sustainability**: Electric-powered boats introduced to reduce emissions; recycling programs onboard
+- **Rating**: 4.7/5 (based on visitor reviews)
 
-Paris, known as the "City of Light," is a global hub for art, culture, and history. From iconic landmarks like the Eiffel Tower and Notre-Dame Cathedral to charming neighborhoods like Montmartre and Le Marais, Paris offers unforgettable experiences for travelers of all kinds.
+# Wine Tasting Tours
+- **Description**: Explore Parisian wine culture with guided tastings of French wines paired with local cheeses or charcuterie boards.
+- **Highlights**: French wines, local cheese pairings, expert-led sessions
+- **Best For**: Wine enthusiasts, food lovers, cultural explorers
+- **Location**: Various wine bars and tasting venues across Paris, including Le Marais and Montmartre
+- **Seasonal Availability**: Year-round
+- **Accessibility**: Wheelchair accessible venues available for most tours; dietary accommodations provided upon request
+- **Peak Seasons**: Fall harvest season (September – November)
+- **Price Range**: Mid-range to Luxury (€50–€150 depending on experience level)
+- **Activities**: Wine tasting, food pairing, cultural exploration of French wine regions through expert-led sessions
+- **Sustainability**: Support for local vineyards practicing sustainable farming methods; eco-friendly packaging for wine products
+- **Rating**: 4.8/5 (based on visitor reviews)
 
-# Popular Attractions in Paris
+# Walking Tours in Le Marais
+- **Description**: Discover trendy boutiques, historic sites like Place des Vosges, and diverse eateries in one of Paris's most charming neighborhoods.
+- **Highlights**: Boutique shopping, historic architecture, diverse dining options
+- **Best For**: History buffs, shoppers, food enthusiasts
+- **Location**: Le Marais district, central Paris
+- **Seasonal Availability**: Year-round
+- **Accessibility**: Partial wheelchair access due to cobblestone streets; sensory-friendly tours available upon request
+- **Peak Seasons**: Spring and Fall (April – May, September – October)
+- **Price Range**: Budget (€10–€30 depending on tour type)
+- **Activities**: Shopping, dining, historical exploration of Parisian culture and architecture
+- **Sustainability**: Local artisan shops promote sustainable practices; eco-friendly dining options available in the area
+- **Rating**: 4.6/5 (based on visitor reviews)
 
-# 1. Eiffel Tower
+# Montmartre Art Walks
+- **Description**: Explore Montmartre's artistic heritage with guided tours through cobbled streets featuring street artists and historical landmarks like Sacré-Cœur Basilica.
+- **Highlights**: Street art, Sacré-Cœur Basilica views, artistic history of Montmartre
+- **Best For**: Art lovers, cultural explorers, history enthusiasts
+- **Location**: Montmartre district in northern Paris
+- **Seasonal Availability**: Year-round
+- **Accessibility**: Limited wheelchair access due to steep streets; audio guides available for visually impaired visitors during guided walks
+- **Peak Seasons**: Summer (June – August) and December for holiday markets in Montmartre Square
+- **Price Range**: Budget to Mid-range (€15–€40 depending on tour duration)
+- **Activities**: Street art tours, history walks, photography of landmarks and artistic sites
+- **Sustainability**: Support for local artists and galleries promoting sustainable art practices; eco-friendly transport options available for tours
+- **Rating**: 4.6/5 (based on visitor reviews)
 
-- **Description:** The most iconic landmark in Paris, offering panoramic views from its observation decks. Enjoy the hourly light show after dusk.
-- **Highlights:** Observation decks, light show, restaurants at various levels.
-- **Best For:** Photography, romantic evenings, sightseeing.
-- **Location:** Champ de Mars, 5 Avenue Anatole France.
-- **Price Range:** Mid-range
-- **Seasonal Availability:** Year-round
+# Eiffel Tower
+- **Description**: The most iconic landmark in Paris, offering panoramic views from its observation decks. Enjoy the hourly light show after dusk.
+- **Highlights**: Observation decks, light show, restaurants at various levels.
+- **Best For**: Photography, romantic evenings, sightseeing.
+- **Location**: Champ de Mars, 5 Avenue Anatole France.
+- **Seasonal Availability**: Year-round
+- **Accessibility**: Wheelchair accessible with elevators to the second level; Braille signage available at key points.
+- **Peak Seasons**: Spring and Summer (March – August).
+- **Price Range**: Mid-range (€18–€28 for adult tickets).
+- **Activities**: Sightseeing, dining, photography.
+- **Sustainability**: LED lighting for energy efficiency; recycling programs in restaurants.
+- **Rating**: 4.8/5
 
-# 2. Louvre Museum
+# Louvre Museum
+- **Description**: The world's most visited art museum featuring masterpieces like the Mona Lisa and Venus de Milo. Its glass pyramid entrance is an architectural marvel.
+- **Highlights**: Art collections spanning Egyptian antiquities to Renaissance paintings.
+- **Best For**: Art lovers and history enthusiasts.
+- **Location**: Rue de Rivoli, 75001 Paris.
+- **Seasonal Availability**: Year-round
+- **Accessibility**: Fully wheelchair accessible with elevators and ramps; audio guides available in multiple languages.
+- **Peak Seasons**: Spring and Summer (March – August).
+- **Price Range**: Mid-range (€17 for general admission).
+- **Activities**: Museum tours, art appreciation, cultural exploration.
+- **Sustainability**: Solar panels on the glass pyramid; eco-friendly waste management practices.
+- **Rating**: 4.9/5
 
-- **Description:** The world’s most visited art museum featuring masterpieces like the Mona Lisa and Venus de Milo. Its glass pyramid entrance is an architectural marvel.
-- **Highlights:** Art collections spanning Egyptian antiquities to Renaissance paintings.
-- **Best For:** Art lovers and history enthusiasts.
-- **Location:** Rue de Rivoli, 75001 Paris.
-- **Price Range:** Mid-range
-- **Seasonal Availability:** Year-round
+# Notre-Dame Cathedral
+- **Description**: A Gothic masterpiece with intricate facades and soaring spires. Recently restored after the 2019 fire.
+- **Highlights**: Stained glass windows, rooftop views of Paris, gargoyles.
+- **Best For**: Architecture enthusiasts and history buffs.
+- **Location**: Île de la Cité, 6 Parvis Notre-Dame - Pl. Jean-Paul II.
+- **Seasonal Availability**: Year-round
+- **Accessibility**: Limited wheelchair access; main floor accessible but upper levels require stairs. Audio guides available for visitors with visual impairments.
+- **Peak Seasons**: Spring and Fall (April – May, September – October).
+- **Price Range**: Budget (€10 for rooftop access).
+- **Activities**: Sightseeing, architectural tours, photography.
+- **Sustainability**: Restoration efforts used eco-friendly materials; energy-efficient lighting installed throughout the cathedral post-renovation.
+- **Rating**: 4.7/5
 
-# 3. Notre-Dame Cathedral
+# Montmartre District
+- **Description**: A bohemian neighborhood with cobbled streets, local art galleries, and vibrant cafes. Known for its artistic heritage.
+- **Highlights**: Sacré-Cœur Basilica, street art, vintage shopping.
+- **Best For**: Art lovers and cultural explorers.
+- **Location**: Northern Paris.
+- **Seasonal Availability**: Year-round
+- **Accessibility**: Partial wheelchair access; steep streets can be challenging for mobility-impaired visitors but Sacré-Cœur offers elevator access to some areas.
+- **Peak Seasons**: Summer (June – August) and December for holiday markets.
+- **Price Range**: Budget to Mid-range (€0–€15 depending on activities).
+- **Activities**: Street art tours, shopping, dining at local cafes.
+- **Sustainability**: Local artisan markets promote sustainable shopping; electric transport options available in the area.
+- **Rating**: 4.6/5
 
-- **Description:** A Gothic masterpiece with intricate facades and soaring spires. Recently restored after the 2019 fire.
-- **Highlights:** Stained glass windows, rooftop views of Paris, gargoyles.
-- **Best For:** Architecture enthusiasts and history buffs.
-- **Location:** Île de la Cité, 6 Parvis Notre-Dame - Pl. Jean-Paul II.
-- **Price Range:** Budget
-- **Seasonal Availability:** Year-round
+# Musée d'Orsay
+- **Description**: A former railway station turned museum showcasing Impressionist masterpieces by Monet, Van Gogh, and Degas.
+- **Highlights**: Impressionist and post-Impressionist art collections.
+- **Best For**: Art enthusiasts and museum-goers.
+- **Location**: 1 Rue de la Légion d'Honneur, 75007 Paris.
+- **Seasonal Availability**: Year-round
+- **Accessibility**: Fully wheelchair accessible; audio guides available in multiple languages.
+- **Peak Seasons**: Spring (March – May) and Fall (September – November).
+- **Price Range**: Mid-range (€16 general admission).
+- **Activities**: Museum tours, art appreciation sessions, photography of exhibits and architecture.
+- **Sustainability**: Energy-efficient lighting systems installed throughout the museum; eco-friendly waste management initiatives in place for exhibitions and events.
+- **Rating**: 4.8/5
 
-# 4. Montmartre District
+# Versailles Palace
+- **Description**: A UNESCO World Heritage site featuring opulent architecture and sprawling gardens. Perfect for day trips from Paris.
+- **Highlights**: Hall of Mirrors, royal apartments, gardens with fountains.
+- **Best For**: History enthusiasts and day-trippers.
+- **Location**: Place d'Armes, Versailles.
+- **Seasonal Availability**: April – October
+- **Accessibility**: Wheelchair accessible in most areas; some garden paths may be challenging for mobility-impaired visitors. Golf carts are available for rent to explore the gardens.
+- **Peak Seasons**: Spring and Summer (April – August).
+- **Price Range**: Luxury (€20–€30 for palace entry; additional fees for garden access on fountain show days).
+- **Activities**: History tours, garden walks, photography.
+- **Sustainability**: Solar panels installed on palace rooftops; sustainable gardening practices used in maintaining the grounds.
+- **Rating**: 4.7/5
 
-- **Description:** A bohemian neighborhood with cobbled streets, local art galleries, and vibrant cafes. Known for its artistic heritage.
-- **Highlights:** Sacré-Cœur Basilica, street art, vintage shopping.
-- **Best For:** Art lovers and cultural explorers.
-- **Location:** Northern Paris.
-- **Price Range:** Budget to Mid-range
-- **Seasonal Availability:** Year-round
-
-# 5. Musée d’Orsay
-
-- **Description:** A former railway station turned museum showcasing Impressionist masterpieces by Monet, Van Gogh, and Degas.
-- **Highlights:** Impressionist and post-Impressionist art collections.
-- **Best For:** Art enthusiasts and museum-goers.
-- **Location:** 1 Rue de la Légion d'Honneur, 75007 Paris.
-- **Price Range:** Mid-range
-- **Seasonal Availability:** Year-round
-
-# 6. Versailles Palace
-
-- **Description:** A UNESCO World Heritage site featuring opulent architecture and sprawling gardens. Perfect for day trips from Paris.
-- **Highlights:** Hall of Mirrors, royal apartments, gardens with fountains.
-- **Best For:** History enthusiasts and day-trippers.
-- **Location:** Place d'Armes, Versailles.
-- **Price Range:** Luxury
-- **Seasonal Availability:** April – October
-
-# 7. Sainte-Chapelle
-
-- **Description:** A stunning Gothic chapel known for its intricate stained glass windows depicting biblical scenes.
-- **Highlights:** Stained glass windows and serene ambiance.
-- **Best For:** Architecture lovers and peaceful exploration.
-- **Location:** Île de la Cité, Boulevard du Palais.
-- **Price Range:** Budget
-- **Seasonal Availability:** Year-round
-
-# Popular Activities in Paris
-
-# 1. Seine River Cruise
-
-- **Description:** Take a leisurely cruise along the Seine River to see iconic landmarks like the Eiffel Tower and Notre-Dame Cathedral from a unique perspective.
-- **Price Range:** Mid-range
-- **Seasonal Availability:** April – October
-
-# 2. Wine Tasting Tours
-
-- **Description:** Explore Parisian wine culture with guided tastings of French wines paired with local cheeses or charcuterie boards.
-- **Price Range:** Mid-range to Luxury
-- **Seasonal Availability:** Year-round
-
-# 3. Walking Tours in Le Marais
-
-- **Description:** Discover trendy boutiques, historic sites like Place des Vosges, and diverse eateries in one of Paris’s most charming neighborhoods.
-- **Price Range:** Budget
-- **Seasonal Availability:** Year-round
-
-# 4. Montmartre Art Walks
-
-- **Description:** Explore Montmartre’s artistic heritage with guided tours through cobbled streets featuring street artists and historical landmarks like Sacré-Cœur Basilica.
-- **Price Range:** Budget to Mid-range
-- **Seasonal Availability:** Year-round
-
-# 5. Cooking Classes
-
-- **Description:** Learn to prepare classic French dishes like coq au vin or macarons in hands-on workshops led by professional chefs.
-- **Price Range:** Mid-range
-- **Seasonal Availability:** Year-round
-
-# Best Time to Visit
-
-The best time to visit Paris is during spring (April to June) or fall (September to November), when the weather is pleasant and crowds are smaller.
-
-# Tips for Visiting Paris Attractions
-
-- Book tickets online in advance for popular attractions like the **Eiffel Tower** or **Louvre Museum** to skip long lines.
-- Wear comfortable shoes for walking tours in **Montmartre** or **Le Marais** districts.
-- Take advantage of public transportation with a metro pass to easily navigate between attractions.
+# Sainte-Chapelle
+- **Description**: A stunning Gothic chapel known for its intricate stained glass windows depicting biblical scenes.
+- **Highlights**: Stained glass windows and serene ambiance.
+- **Best For**: Architecture lovers and peaceful exploration.
+- **Location**: Île de la Cité, Boulevard du Palais.
+- **Seasonal Availability**: Year-round
+- **Accessibility**: Wheelchair accessible on the ground floor; upper chapel requires stairs. Audio guides available for visitors with visual impairments.
+- **Peak Seasons**: Spring and Summer (April – August).
+- **Price Range**: Budget (€11 general admission).
+- **Activities**: Architectural tours, photography, quiet reflection.
+- **Sustainability**: LED lighting installed to preserve stained glass windows; eco-friendly waste management practices implemented during restoration projects.
+- **Rating**: 4.8/5
