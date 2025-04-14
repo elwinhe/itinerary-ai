@@ -305,15 +305,6 @@ export default function ChatWindow() {
     }
   }
 
-  const handleBudgetSelect = (budget: string) => {
-    // If the same budget is selected again, deselect it
-    if (selectedBudget === budget) {
-      setSelectedBudget(null);
-    } else {
-      setSelectedBudget(budget);
-    }
-  };
-
   return (
     <div className={styles.container}>
       {/* Sidebar */}
