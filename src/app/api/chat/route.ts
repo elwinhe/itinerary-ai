@@ -59,7 +59,7 @@ export async function POST(request: Request) {
     }
 
     const embedding = await getEmbedding(message);
-    const contextSnippets = await fetchFromPinecone(embedding, 3, destination, filters);
+    const contextSnippets = await fetchFromPinecone(embedding, 3, destination);
     
     if (contextSnippets.length === 0) {
       return NextResponse.json({ 
@@ -115,7 +115,7 @@ Provide concise, practical advice with the following formatting:
   }
 }
 
-async function fetchFromPinecone(embedding: number[], topK: number = 3, destination?: string, filters: TravelFilters = {}): Promise<string[]> {
+async function fetchFromPinecone(embedding: number[], topK: number = 3, destination?: string): Promise<string[]> {
   try {
     const queryOptions: {
       vector: number[];
