@@ -15,44 +15,9 @@ interface Message {
   namespace?: string;
 }
 
-// Define a proper type for filters
-interface TravelFilters {
-  destination?: string;
-  budget?: string;
-  activities?: string[];
-  accessibility?: {
-    wheelchair?: boolean;
-    brailleSignage?: boolean;
-    audioDescriptions?: boolean;
-    quietSpaces?: boolean;
-  };
-  familyFeatures?: {
-    kidZones?: boolean;
-    strollerAccess?: boolean;
-    familyRooms?: boolean;
-    childCare?: boolean;
-  };
-  sustainability?: {
-    ecoCertified?: boolean;
-    renewableEnergy?: boolean;
-    waterConservation?: boolean;
-    localSourcing?: boolean;
-  };
-  season?: string;
-  peakSeasons?: string[];
-  language?: string;
-  minRating?: number;
-  sentiment?: string;
-  coordinates?: {
-    lat: number;
-    lng: number;
-  };
-  maxDistance?: number;
-}
-
 export async function POST(request: Request) {
   try {
-    const { message, destination, chatHistory = [], filters = {} } = await request.json();
+    const { message, destination, chatHistory = [] } = await request.json();
     
     if (!message) {
       return NextResponse.json({ error: 'Message is required.' }, { status: 400 });
