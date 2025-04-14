@@ -68,7 +68,7 @@ This approach ensures that all recommendations are based solely on the curated d
 
 ### Data Processing
 
-The application uses a custom indexing script (`indexTravelData.ts`) to process the travel data and store it in Pinecone for efficient retrieval. The script:
+The application uses a custom indexing script (`indexTravelData.ts - generated with the help of perplexity.ai`) to process the travel data and store it in Pinecone for efficient retrieval. The script:
 
 1. Extracts structured metadata from markdown files
 2. Chunks the content for optimal retrieval
