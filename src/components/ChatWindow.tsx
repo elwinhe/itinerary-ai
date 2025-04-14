@@ -60,7 +60,6 @@ interface TravelFilters {
 export default function ChatWindow() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputValue, setInputValue] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
   const [chatHistory, setChatHistory] = useState<ChatHistory[]>([]);
   const [currentChatId, setCurrentChatId] = useState<string | null>(null);
   const [currentDestination, setCurrentDestination] = useState<string | null>(null);
@@ -428,23 +427,6 @@ export default function ChatWindow() {
               </svg>
             </button>
           </form>
-
-          {/* Buttons */}
-          <div className={styles.buttonGroup}>
-            {[
-              { text: 'Affordable Adventures', value: 'budget' },
-              { text: 'Getaway Gems (mid-range)', value: 'mid-range' },
-              { text: 'Exclusive Excursions', value: 'luxury' }
-            ].map((button, i) => (
-              <button 
-                key={i} 
-                className={`${styles.buttonCommon} ${selectedBudget === button.value ? styles.buttonActive : ''}`}
-                onClick={() => handleBudgetSelect(button.value)}
-              >
-                {button.text}
-              </button>
-            ))}
-          </div>
         </div>
       </main>
     </div>
