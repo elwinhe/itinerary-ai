@@ -4,7 +4,6 @@ import fs from 'fs/promises';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 
-// Helper function to categorize destinations by continent
 function getContinent(destination: string): string {
   const continentMap: Record<string, string> = {
     'Paris': 'Europe',
@@ -178,7 +177,7 @@ function extractSections(text: string) {
   return sections;
 }
 
-const MAX_CHUNK_SIZE = 500; // Optimal for travel content and text-embedding-3-small
+const MAX_CHUNK_SIZE = 500; 
 
 function estimateTokens(text: string): number {
   return Math.ceil(text.length / 4);
@@ -297,7 +296,7 @@ async function processDocument(filePath: string, destination: string, type: stri
           metadata: vector.metadata
         })));
         console.log(`Upserted batch of ${vectorsToUpsert.length} vectors to namespace: ${namespace}`);
-        vectorsToUpsert.length = 0; // Clear the batch
+        vectorsToUpsert.length = 0; 
       }
     }
     

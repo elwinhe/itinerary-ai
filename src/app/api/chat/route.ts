@@ -3,17 +3,9 @@ import { NextRequest, NextResponse } from 'next/server';
 import OpenAI from 'openai';
 import { pineconeIndex } from '@/lib/pinecone'; // Import Pinecone client
 
-// Initialize the OpenAI client
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
-
-interface ChatHistoryItem {
-  id: string;
-  title: string;
-  date: string;
-  messages: Message[];
-}
 
 interface Message {
   id: string;
@@ -32,15 +24,13 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Message is required.' }, { status: 400 });
     }
 
-    // 1. Generate query embedding from the user's message.
     const embedding = await getEmbedding(message);
     console.log('Generated embedding for message');
 
-    // 2. Retrieve context snippets from Pinecone.
     const contextSnippets = await fetchFromPinecone(embedding, 3, destination);
     console.log('Retrieved context snippets:', contextSnippets.length, 'snippets');
     
-    // If no context snippets are found, return early with a message
+    // check for empty context snippets
     if (contextSnippets.length === 0) {
       return NextResponse.json({ 
         response: "CONTEXT IS EMPTY.",
@@ -48,40 +38,20 @@ export async function POST(request: Request) {
       });
     }
     
-    // 3. Construct a detailed prompt that includes the user query and the retrieved context.
     const prompt = constructPrompt(message, contextSnippets, chatHistory);
     console.log('Constructed prompt with history and context');
 
-    const template = `
-  STRICT INSTRUCTION: You are a travel assistant that can ONLY provide information that is EXPLICITLY present in the context snippets provided below.
-  You MUST NOT use any external knowledge, make assumptions, or infer information not directly stated in the context.
-  If the user asks about something not covered in the context, respond with: "I don't have specific information about that in my database. Please try asking about something else."
-  
-  Provide concise, practical advice with the following formatting:
-  - Do NOT start your response with a title that repeats the user's question
-  - Use headings with # for main sections (but not as the first line)
-  - Use paragraphs for detailed explanations
-  - Highlight important information with **bold text**
-  - Keep responses focused and to the point
-  - If suggesting locations, include brief descriptions
-  - If suggesting activities, include approximate durations
-  - If suggesting accommodations, include price ranges when possible
+    const template = `STRICT INSTRUCTION: You are a travel assistant that can ONLY provide information that is EXPLICITLY present in the context snippets provided below.
+You MUST NOT use any external knowledge, make assumptions, or infer information not directly stated in the context.
+If the user asks about something not covered in the context, respond with: "I don't have specific information about that in my database. Please try asking about something else."
 
-START CONTEXT BLOCK
-Context: {context}
-END CONTEXT BLOCK
-
-START CONVERSATION BLOCK
-Current conversation: {chat_history}
-END CONVERSATION BLOCK
-
-START USER MESSAGE BLOCK
-user: {user_message}
-END USER MESSAGE BLOCK
-
-START ASSISTANT MESSAGE BLOCK
-assistant: {assistant_message}
-END ASSISTANT MESSAGE BLOCK` 
+Provide concise, practical advice with the following formatting:
+- Use bulleted paragraphs for detailed explanations
+- Highlight important information with **bold text**
+- Keep responses focused and to the point
+- If suggesting locations, include brief descriptions
+- If suggesting activities, include approximate durations
+- If suggesting accommodations, include price ranges when possible`;
 
     // 4. Call the OpenAI Chat Completion API with the constructed prompt.
     const completion = await openai.chat.completions.create({
@@ -97,10 +67,8 @@ END ASSISTANT MESSAGE BLOCK`
       max_tokens: 500,
     });
 
-    // Extract the assistant's response.
     const assistantMessage = completion.choices[0]?.message?.content || "I couldn't generate a response.";
 
-    // Return the response.
     return NextResponse.json({ 
       response: assistantMessage,
       role: 'assistant'
@@ -200,10 +168,12 @@ async function getEmbedding(message: string) {
 
 // Helper function that constructs the final prompt using user input and context.
 function constructPrompt(userMessage: string, contextSnippets: string[], messageHistory: Message[] = []) {
-  // Format message history for context
+  // Format message history for context, including both user and assistant messages
   const formattedHistory = messageHistory
-    .map(msg => `User: ${msg.content}`)
+    .map(msg => `${msg.role === 'user' ? 'User' : 'Assistant'}: ${msg.content}`)
     .join('\n');
   
-  return `User Query: "${userMessage}"\n\nContext:\n${contextSnippets.join("\n")}\n\nPrevious User Messages:\n${formattedHistory}\n\nBased STRICTLY on the above context and conversation history, provide a detailed travel recommendation specific to ${userMessage}. IMPORTANT: Do NOT start your response with a title or heading that repeats the user's question. Begin directly with the content of your response. ONLY use information EXPLICITLY stated in the provided context snippets. DO NOT use any external knowledge or make assumptions.`;
+  const context = contextSnippets.join("\n");
+  
+  return `Context:\n${context}\n\nConversation History:\n${formattedHistory}\n\nUser Query: "${userMessage}"\n\nBased STRICTLY on the above context and conversation history, provide a detailed travel recommendation specific to ${userMessage}. IMPORTANT: Do NOT start your response with a title or heading that repeats the user's question. Begin directly with the content of your response. DO NOT use any leading '#' characters in your response. ONLY use information EXPLICITLY stated in the provided context snippets. DO NOT use any external knowledge or make assumptions.`;
 }

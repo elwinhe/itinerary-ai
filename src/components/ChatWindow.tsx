@@ -4,15 +4,9 @@
 
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
-import Script from 'next/script';
 import styles from './ChatWindow.module.css';
 import ResponseMessage from './ResponseMessage';
 
-declare global {
-  interface Window {
-    google: any; 
-  }
-}
 
 interface Message {
   id: string;
@@ -44,15 +38,6 @@ export default function ChatWindow() {
       textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
     }
   }, [input]);
-
-  useEffect(() => {
-    if (mapLoaded && mapRef.current && window.google) {
-      const map = new window.google.maps.Map(mapRef.current, {
-        center: { lat: 37.7749, lng: -122.4194 },
-        zoom: 12,
-      });
-    }
-  }, [mapLoaded]);
 
   useEffect(() => {
     const storedMessages = localStorage.getItem('chatMessages');
@@ -211,12 +196,6 @@ export default function ChatWindow() {
 
   return (
     <div className={styles.container}>
-      {/* Google Maps Script */}
-      <Script
-        src={`https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`}
-        onLoad={() => setMapLoaded(true)}
-      />
-
       {/* Sidebar */}
       <aside className={styles.sidebar}>
         <div className={styles.sidebarHeader}>
