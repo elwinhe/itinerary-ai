@@ -23,21 +23,56 @@ interface ChatHistory {
   messages: Message[];
 }
 
+interface TravelFilters {
+  destination?: string;
+  budget?: string;
+  activities?: string[];
+  accessibility?: {
+    wheelchair?: boolean;
+    brailleSignage?: boolean;
+    audioDescriptions?: boolean;
+    quietSpaces?: boolean;
+  };
+  familyFeatures?: {
+    kidZones?: boolean;
+    strollerAccess?: boolean;
+    familyRooms?: boolean;
+    childCare?: boolean;
+  };
+  sustainability?: {
+    ecoCertified?: boolean;
+    renewableEnergy?: boolean;
+    waterConservation?: boolean;
+    localSourcing?: boolean;
+  };
+  season?: string;
+  peakSeasons?: string[];
+  language?: string;
+  minRating?: number;
+  sentiment?: string;
+  coordinates?: {
+    lat: number;
+    lng: number;
+  };
+  maxDistance?: number;
+}
+
 export default function ChatWindow() {
   const [messages, setMessages] = useState<Message[]>([]);
-  const [input, setInput] = useState('');
+  const [inputValue, setInputValue] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const [chatHistory, setChatHistory] = useState<ChatHistory[]>([]);
   const [currentChatId, setCurrentChatId] = useState<string | null>(null);
+  const [currentDestination, setCurrentDestination] = useState<string | null>(null);
+  const [selectedBudget, setSelectedBudget] = useState<string | null>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-  const mapRef = useRef<HTMLDivElement>(null);
-  const [mapLoaded, setMapLoaded] = useState(false);
 
   useEffect(() => {
     if (textareaRef.current) {
       textareaRef.current.style.height = 'auto';
       textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
     }
-  }, [input]);
+  }, [inputValue]);
 
   useEffect(() => {
     const storedMessages = localStorage.getItem('chatMessages');
@@ -63,11 +98,11 @@ export default function ChatWindow() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!input.trim()) return;
+    if (!inputValue.trim()) return;
 
     const newMessage: Message = {
       id: crypto.randomUUID(),
-      content: input,
+      content: inputValue,
       role: 'user',
       timestamp: new Date(),
     };
@@ -79,7 +114,7 @@ export default function ChatWindow() {
       const newChatId = crypto.randomUUID();
       const newChatHistory: ChatHistory = {
         id: newChatId,
-        title: input.length > 20 ? input.substring(0, 20) + '...' : input,
+        title: inputValue.length > 20 ? inputValue.substring(0, 20) + '...' : inputValue,
         date: new Date().toLocaleDateString(),
         messages: updatedMessages,
       };
@@ -93,14 +128,14 @@ export default function ChatWindow() {
       ));
     }
     
-    setInput('');
+    setInputValue('');
 
-    handleSendMessage(input);
+    handleSendMessage(inputValue);
   };
 
   const handleNewTrip = () => {
     setMessages([]);
-    setInput('');
+    setInputValue('');
     setCurrentChatId(null);
     if (textareaRef.current) {
       textareaRef.current.style.height = 'auto';
@@ -123,17 +158,94 @@ export default function ChatWindow() {
       timestamp: new Date(),
     };
 
-    const newMessages = [...messages, { role: 'user', content: userMessage }];
-    
     try {
       setMessages(prevMessages => [...prevMessages, loadingMessage]);
+
+      // Extract destination from user message if not explicitly set
+      let destination = currentDestination;
+      if (!destination) {
+        // Simple extraction - in a real app, you'd use NLP or a more sophisticated approach
+        const destinations = ['kyoto', 'paris', 'bali'];
+        for (const dest of destinations) {
+          if (userMessage.toLowerCase().includes(dest)) {
+            destination = dest;
+            break;
+          }
+        }
+      }
+
+      // Extract filters from user message
+      const filters: TravelFilters = {};
+      
+      // Set destination if found
+      if (destination) {
+        filters.destination = destination;
+      }
+      
+      // Add budget filter if selected
+      if (selectedBudget) {
+        filters.budget = selectedBudget;
+      }
+      
+      // Extract accessibility filters
+      if (userMessage.toLowerCase().includes('wheelchair') || 
+          userMessage.toLowerCase().includes('accessible')) {
+        filters.accessibility = {
+          wheelchair: true
+        };
+      }
+      
+      // Extract family-friendly filters
+      if (userMessage.toLowerCase().includes('family') || 
+          userMessage.toLowerCase().includes('kid') || 
+          userMessage.toLowerCase().includes('children')) {
+        filters.familyFeatures = {
+          kidZones: true,
+          strollerAccess: true
+        };
+      }
+      
+      // Extract sustainability filters
+      if (userMessage.toLowerCase().includes('eco') || 
+          userMessage.toLowerCase().includes('sustainable') || 
+          userMessage.toLowerCase().includes('green')) {
+        filters.sustainability = {
+          ecoCertified: true
+        };
+      }
+      
+      // Extract season filters
+      const seasons = ['spring', 'summer', 'fall', 'winter', 'autumn'];
+      for (const season of seasons) {
+        if (userMessage.toLowerCase().includes(season)) {
+          filters.season = season;
+          break;
+        }
+      }
+      
+      // Extract language filters
+      const languages = ['english', 'french', 'spanish', 'japanese', 'chinese'];
+      for (const lang of languages) {
+        if (userMessage.toLowerCase().includes(lang)) {
+          filters.language = lang;
+          break;
+        }
+      }
+      
+      // Extract rating filters
+      const ratingMatch = userMessage.match(/(\d+(\.\d+)?)\s*\+?\s*stars?/i);
+      if (ratingMatch) {
+        filters.minRating = parseFloat(ratingMatch[1]);
+      }
 
       const res = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
           message: userMessage,
-          chatHistory: messages // Send current messages as chat history
+          chatHistory: messages,
+          destination,
+          filters
         }),
       });
       
@@ -193,6 +305,15 @@ export default function ChatWindow() {
       });
     }
   }
+
+  const handleBudgetSelect = (budget: string) => {
+    // If the same budget is selected again, deselect it
+    if (selectedBudget === budget) {
+      setSelectedBudget(null);
+    } else {
+      setSelectedBudget(budget);
+    }
+  };
 
   return (
     <div className={styles.container}>
@@ -276,8 +397,8 @@ export default function ChatWindow() {
               ref={textareaRef}
               className={styles.inputField}
               placeholder="What's on your mind?"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
               rows={1}
               onKeyDown={(e) => {
                 if (e.key === 'Enter' && !e.shiftKey) {
@@ -310,9 +431,17 @@ export default function ChatWindow() {
 
           {/* Buttons */}
           <div className={styles.buttonGroup}>
-            {['Affordable Adventures', 'Getaway Gems', 'Exclusive Excursions'].map((text, i) => (
-              <button key={i} className={styles.buttonCommon}>
-                {text}
+            {[
+              { text: 'Affordable Adventures', value: 'budget' },
+              { text: 'Getaway Gems (mid-range)', value: 'mid-range' },
+              { text: 'Exclusive Excursions', value: 'luxury' }
+            ].map((button, i) => (
+              <button 
+                key={i} 
+                className={`${styles.buttonCommon} ${selectedBudget === button.value ? styles.buttonActive : ''}`}
+                onClick={() => handleBudgetSelect(button.value)}
+              >
+                {button.text}
               </button>
             ))}
           </div>

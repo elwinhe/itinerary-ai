@@ -2,12 +2,15 @@
   "name": "perplexity-project",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "index-travel-data": "ts-node scripts/indexTravelData.ts"
+    "build:scripts": "tsc scripts/*.ts --outDir dist/scripts --esModuleInterop --module ES2020 --moduleResolution node",
+    "check-index": "tsx scripts/checkIndex.ts",
+    "index-data": "tsx scripts/indexTravelData.ts"
   },
   "dependencies": {
     "@dqbd/tiktoken": "^1.0.20",
@@ -24,16 +27,18 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4.1.3",
-    "@types/node": "^20",
+    "@types/node": "^20.17.30",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.21",
+    "cross-env": "^7.0.3",
     "dotenv-cli": "^8.0.0",
     "eslint": "^9",
     "eslint-config-next": "15.3.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.1.3",
     "ts-node": "^10.9.2",
-    "typescript": "^5"
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
   }
 }

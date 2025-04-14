@@ -233,6 +233,11 @@
   background-color: #FFDC9A;
 }
 
+.buttonActive {
+  background-color: #fff2db;
+  color: var(--primary);
+}
+
 /* Map Container */
 .mapContainer {
   width: 100%;
