@@ -45,11 +45,10 @@ export async function POST(request: Request) {
     const prompt = constructPrompt(message, contextSnippets, chatHistory);
     console.log('Constructed prompt with history and context');
 
-    const template = `Answer the user's questions based only on the following context. 
-If the answer is not in the context, reply politely that you do not have that information available.
+    const template = `
 Provide concise, practical advice with the following formatting:
-- Do not reiterate the user's message in your response
-- Use headings with # for main sections
+- Do NOT start your response with a title that repeats the user's question
+- Use headings with # for main sections (but not as the first line)
 - Use bullet points - for lists
 - Use paragraphs for detailed explanations
 - Highlight important information with **bold text**
@@ -178,5 +177,6 @@ function constructPrompt(userMessage: string, contextSnippets: string[], message
     .map(msg => `User: ${msg.content}`)
     .join('\n');
   
-  return `User Query: "${userMessage}"\n\nContext:\n${contextSnippets.join("\n")}\n\nPrevious User Messages:\n${formattedHistory}\n\nBased on the above context and conversation history, provide a detailed travel recommendation specific to ${userMessage}.`;
+  return `User Query: "${userMessage}"\n\nContext:\n${contextSnippets.join("\n")}\n\nPrevious User Messages:\n${formattedHistory}\n\nBased on the above context and conversation history, provide a detailed travel recommendation specific to ${userMessage}. IMPORTANT: Do NOT start your response with a title or heading that repeats the user's question. Begin directly with the content of your response. Answer the user's questions based only on the following context. 
+If the answer is not in the context, reply politely that you do not have that information available.`;
 }
