@@ -53,19 +53,14 @@ interface TravelFilters {
 export async function POST(request: Request) {
   try {
     const { message, destination, chatHistory = [], filters = {} } = await request.json();
-    console.log('Received request with message:', message);
     
     if (!message) {
       return NextResponse.json({ error: 'Message is required.' }, { status: 400 });
     }
 
     const embedding = await getEmbedding(message);
-    console.log('Generated embedding for message');
-
     const contextSnippets = await fetchFromPinecone(embedding, 3, destination, filters);
-    console.log('Retrieved context snippets:', contextSnippets.length, 'snippets');
     
-    // check for empty context snippets
     if (contextSnippets.length === 0) {
       return NextResponse.json({ 
         response: "I don't have specific information about that in my database. Please try asking about something else.",
@@ -74,7 +69,6 @@ export async function POST(request: Request) {
     }
     
     const prompt = constructPrompt(message, contextSnippets, chatHistory);
-    console.log('Constructed prompt with history and context');
 
     const template = `STRICT INSTRUCTION: You are a travel assistant that can ONLY provide information that is EXPLICITLY present in the context snippets provided below.
 You MUST NOT use any external knowledge, make assumptions, or infer information not directly stated in the context.
@@ -113,7 +107,7 @@ Provide concise, practical advice with the following formatting:
       namespace: destination ? destination.toLowerCase() : undefined
     });
   } catch (error) {
-    console.error('Error calling OpenAI API:', error);
+    console.error('Error in POST handler:', error);
     return NextResponse.json(
       { error: 'Failed to get response from AI' },
       { status: 500 }
@@ -123,8 +117,6 @@ Provide concise, practical advice with the following formatting:
 
 async function fetchFromPinecone(embedding: number[], topK: number = 3, destination?: string, filters: TravelFilters = {}): Promise<string[]> {
   try {
-    console.log(`Fetching from Pinecone with destination: ${destination || 'default'}`);
-    
     const queryOptions: {
       vector: number[];
       topK: number;
@@ -138,31 +130,46 @@ async function fetchFromPinecone(embedding: number[], topK: number = 3, destinat
     };
     
     if (destination) {
-      queryOptions.namespace = destination.toLowerCase();
-    }
-    
-    // Add filters if provided
-    if (filters && Object.keys(filters).length > 0) {
-      queryOptions.filter = buildFilterFromPreferences(filters);
-      console.log('Applied filters:', JSON.stringify(filters));
+      const namespace = destination.toLowerCase();
+      
+      try {
+        const queryResponse = await pineconeIndex.namespace(namespace).query(queryOptions);
+        
+        if (queryResponse.matches && queryResponse.matches.length > 0) {
+          const contextSnippets = queryResponse.matches.map((match) => {
+            const metadata = match.metadata as Record<string, unknown>;
+            if (!metadata || !metadata.text) {
+              return null;
+            }
+            return metadata.text as string;
+          }).filter(Boolean) as string[];
+          
+          if (contextSnippets.length > 0) {
+            return contextSnippets;
+          }
+        }
+      } catch (namespaceError) {
+        console.error(`Error querying namespace ${namespace}:`, namespaceError);
+      }
     }
     
     const queryResponse = await pineconeIndex.query(queryOptions);
     
-    if (!queryResponse || !queryResponse.matches) {
-      console.log("No matches found in Pinecone.");
+    if (!queryResponse || !queryResponse.matches || queryResponse.matches.length === 0) {
       return [];
     }
-
-    console.log(`Found ${queryResponse.matches.length} matches in Pinecone.`);
+    
     const contextSnippets = queryResponse.matches.map((match) => {
       const metadata = match.metadata as Record<string, unknown>;
-      return metadata ? metadata.text as string : 'No context available';
-    });
+      if (!metadata || !metadata.text) {
+        return null;
+      }
+      return metadata.text as string;
+    }).filter(Boolean) as string[];
 
     return contextSnippets;
   } catch (error) {
-    console.error('Error querying Pinecone:', error);
+    console.error('Error in fetchFromPinecone:', error);
     return [];
   }
 }
@@ -171,7 +178,6 @@ async function fetchFromPinecone(embedding: number[], topK: number = 3, destinat
 function buildFilterFromPreferences(preferences: TravelFilters): Record<string, unknown> {
   const filter: Record<string, unknown> = {};
   
-  // Basic filters
   if (preferences.destination) {
     filter.destination = { $eq: preferences.destination };
   }
@@ -268,8 +274,6 @@ function buildFilterFromPreferences(preferences: TravelFilters): Record<string, 
 
 // Helper function to generate a query embedding using OpenAI's API.
 async function getEmbedding(message: string) {
-  console.log(`Generating embedding for message: "${message}"`);
-  
   const res = await fetch('https://api.openai.com/v1/embeddings', {
     method: 'POST',
     headers: {
@@ -278,7 +282,7 @@ async function getEmbedding(message: string) {
     },
     body: JSON.stringify({
       input: message,
-      model: 'text-embedding-3-small'
+      model: 'text-embedding-ada-002'
     })
   });
   
@@ -294,7 +298,6 @@ async function getEmbedding(message: string) {
 
 // Helper function that constructs the final prompt using user input and context.
 function constructPrompt(userMessage: string, contextSnippets: string[], messageHistory: Message[] = []) {
-  // Format message history for context, including both user and assistant messages
   const formattedHistory = messageHistory
     .map(msg => `${msg.role === 'user' ? 'User' : 'Assistant'}: ${msg.content}`)
     .join('\n');
