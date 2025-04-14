@@ -62,7 +62,7 @@ export default function ChatWindow() {
   const [inputValue, setInputValue] = useState('');
   const [chatHistory, setChatHistory] = useState<ChatHistory[]>([]);
   const [currentChatId, setCurrentChatId] = useState<string | null>(null);
-  const [currentDestination, setCurrentDestination] = useState<string | null>(null);
+  const [currentDestination] = useState<string | null>(null);
   const [selectedBudget, setSelectedBudget] = useState<string | null>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
