@@ -311,7 +311,7 @@ export default function ChatWindow() {
       <aside className={styles.sidebar}>
         <div className={styles.sidebarHeader}>
           <Image 
-            src="/images/logo.png" 
+            src="/images/LOGO.png" 
             alt="Itinerary.ai Logo" 
             width={50} 
             height={50} 
