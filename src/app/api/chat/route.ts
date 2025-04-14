@@ -122,7 +122,6 @@ async function fetchFromPinecone(embedding: number[], topK: number = 3, destinat
       topK: number;
       includeMetadata: boolean;
       namespace?: string;
-      filter?: Record<string, unknown>;
     } = {
       vector: embedding,
       topK: topK,
@@ -174,103 +173,6 @@ async function fetchFromPinecone(embedding: number[], topK: number = 3, destinat
   }
 }
 
-// Helper function to build filter from user preferences
-function buildFilterFromPreferences(preferences: TravelFilters): Record<string, unknown> {
-  const filter: Record<string, unknown> = {};
-  
-  if (preferences.destination) {
-    filter.destination = { $eq: preferences.destination };
-  }
-  
-  if (preferences.budget) {
-    filter.budget_category = { $eq: preferences.budget };
-  }
-  
-  if (preferences.activities && preferences.activities.length > 0) {
-    filter.activities = { $in: preferences.activities };
-  }
-  
-  // Enhanced filters for accessibility
-  if (preferences.accessibility) {
-    if (preferences.accessibility.wheelchair) {
-      filter['accessibility.wheelchair'] = { $eq: true };
-    }
-    if (preferences.accessibility.brailleSignage) {
-      filter['accessibility.brailleSignage'] = { $eq: true };
-    }
-    if (preferences.accessibility.audioDescriptions) {
-      filter['accessibility.audioDescriptions'] = { $eq: true };
-    }
-    if (preferences.accessibility.quietSpaces) {
-      filter['accessibility.quietSpaces'] = { $eq: true };
-    }
-  }
-  
-  // Family-friendly filters
-  if (preferences.familyFeatures) {
-    if (preferences.familyFeatures.kidZones) {
-      filter['familyFeatures.kidZones'] = { $eq: true };
-    }
-    if (preferences.familyFeatures.strollerAccess) {
-      filter['familyFeatures.strollerAccess'] = { $eq: true };
-    }
-    if (preferences.familyFeatures.familyRooms) {
-      filter['familyFeatures.familyRooms'] = { $eq: true };
-    }
-    if (preferences.familyFeatures.childCare) {
-      filter['familyFeatures.childCare'] = { $eq: true };
-    }
-  }
-  
-  // Sustainability filters
-  if (preferences.sustainability) {
-    if (preferences.sustainability.ecoCertified) {
-      filter['sustainability.ecoCertified'] = { $eq: true };
-    }
-    if (preferences.sustainability.renewableEnergy) {
-      filter['sustainability.renewableEnergy'] = { $eq: true };
-    }
-    if (preferences.sustainability.waterConservation) {
-      filter['sustainability.waterConservation'] = { $eq: true };
-    }
-    if (preferences.sustainability.localSourcing) {
-      filter['sustainability.localSourcing'] = { $eq: true };
-    }
-  }
-  
-  // Seasonal filters
-  if (preferences.season) {
-    filter.season = { $eq: preferences.season };
-  }
-  
-  if (preferences.peakSeasons && preferences.peakSeasons.length > 0) {
-    filter.peakSeasons = { $in: preferences.peakSeasons };
-  }
-  
-  // Language filter
-  if (preferences.language) {
-    filter.language = { $eq: preferences.language };
-  }
-  
-  // Rating filter
-  if (preferences.minRating) {
-    filter.numericalRating = { $gte: preferences.minRating };
-  }
-  
-  // Sentiment filter
-  if (preferences.sentiment) {
-    filter.sentiment = { $eq: preferences.sentiment };
-  }
-  
-  // Proximity search (if coordinates are provided)
-  if (preferences.coordinates && preferences.maxDistance) {
-    // This is a simplified approach - in a real implementation, you would use
-    // a more sophisticated geospatial query
-    filter.hasCoordinates = { $eq: true };
-  }
-  
-  return filter;
-}
 
 // Helper function to generate a query embedding using OpenAI's API.
 async function getEmbedding(message: string) {
