@@ -27,7 +27,6 @@ export async function POST(request: Request) {
   try {
     const { message, destination, chatHistory = [] } = await request.json();
     console.log('Received request with message:', message);
-    console.log('Received chat history:', chatHistory.length, 'messages');
     
     if (!message) {
       return NextResponse.json({ error: 'Message is required.' }, { status: 400 });
@@ -41,21 +40,32 @@ export async function POST(request: Request) {
     const contextSnippets = await fetchFromPinecone(embedding, 3, destination);
     console.log('Retrieved context snippets:', contextSnippets.length, 'snippets');
     
+    // If no context snippets are found, return early with a message
+    if (contextSnippets.length === 0) {
+      return NextResponse.json({ 
+        response: "CONTEXT IS EMPTY.",
+        role: 'assistant'
+      });
+    }
+    
     // 3. Construct a detailed prompt that includes the user query and the retrieved context.
     const prompt = constructPrompt(message, contextSnippets, chatHistory);
     console.log('Constructed prompt with history and context');
 
     const template = `
-Provide concise, practical advice with the following formatting:
-- Do NOT start your response with a title that repeats the user's question
-- Use headings with # for main sections (but not as the first line)
-- Use bullet points - for lists
-- Use paragraphs for detailed explanations
-- Highlight important information with **bold text**
-- Keep responses focused and to the point
-- If suggesting locations, include brief descriptions
-- If suggesting activities, include approximate durations
-- If suggesting accommodations, include price ranges when possible
+  STRICT INSTRUCTION: You are a travel assistant that can ONLY provide information that is EXPLICITLY present in the context snippets provided below.
+  You MUST NOT use any external knowledge, make assumptions, or infer information not directly stated in the context.
+  If the user asks about something not covered in the context, respond with: "I don't have specific information about that in my database. Please try asking about something else."
+  
+  Provide concise, practical advice with the following formatting:
+  - Do NOT start your response with a title that repeats the user's question
+  - Use headings with # for main sections (but not as the first line)
+  - Use paragraphs for detailed explanations
+  - Highlight important information with **bold text**
+  - Keep responses focused and to the point
+  - If suggesting locations, include brief descriptions
+  - If suggesting activities, include approximate durations
+  - If suggesting accommodations, include price ranges when possible
 
 START CONTEXT BLOCK
 Context: {context}
@@ -124,23 +134,29 @@ function buildFilterFromPreferences(preferences: any = {}) {
 
 async function fetchFromPinecone(embedding: number[], topK: number = 3, destination?: string): Promise<string[]> {
   try {
-    const queryOptions: any = {
+    console.log(`Fetching from Pinecone with destination: ${destination || 'default'}`);
+    
+    const queryOptions = {
       vector: embedding,
-      topK: topK,
-      includeMetadata: true,
+      topK,
+      includeMetadata: true
     };
 
+    let index = pineconeIndex;
     if (destination) {
-      queryOptions.namespace = destination.toLowerCase(); // Use destination as namespace
+      const namespace = destination.toLowerCase();
+      console.log(`Using namespace: ${namespace}`);
+      index = pineconeIndex.namespace(namespace);
     }
 
-    const queryResponse = await pineconeIndex.query(queryOptions);
+    const queryResponse = await index.query(queryOptions);
 
     if (!queryResponse || !queryResponse.matches) {
       console.log("No matches found in Pinecone.");
       return [];
     }
 
+    console.log(`Found ${queryResponse.matches.length} matches in Pinecone.`);
     const contextSnippets = queryResponse.matches.map((match) => {
       const metadata = match.metadata as any;
       return metadata ? metadata.text : 'No context available';
@@ -149,12 +165,17 @@ async function fetchFromPinecone(embedding: number[], topK: number = 3, destinat
     return contextSnippets;
   } catch (error) {
     console.error('Error querying Pinecone:', error);
+    if (error instanceof Error) {
+      console.error('Error details:', error.message);
+    }
     return [];
   }
 }
 
 // Helper function to generate a query embedding using OpenAI's API.
 async function getEmbedding(message: string) {
+  console.log(`Generating embedding for message: "${message}"`);
+  
   const res = await fetch('https://api.openai.com/v1/embeddings', {
     method: 'POST',
     headers: {
@@ -163,9 +184,16 @@ async function getEmbedding(message: string) {
     },
     body: JSON.stringify({
       input: message,
-      model: 'text-embedding-3-large'
+      model: 'text-embedding-3-small'
     })
   });
+  
+  if (!res.ok) {
+    const errorText = await res.text();
+    console.error(`OpenAI API error: ${res.status} ${res.statusText}`, errorText);
+    throw new Error(`OpenAI API error: ${res.status} ${res.statusText}`);
+  }
+  
   const data = await res.json();
   return data.data[0].embedding;
 }
@@ -177,6 +205,5 @@ function constructPrompt(userMessage: string, contextSnippets: string[], message
     .map(msg => `User: ${msg.content}`)
     .join('\n');
   
-  return `User Query: "${userMessage}"\n\nContext:\n${contextSnippets.join("\n")}\n\nPrevious User Messages:\n${formattedHistory}\n\nBased on the above context and conversation history, provide a detailed travel recommendation specific to ${userMessage}. IMPORTANT: Do NOT start your response with a title or heading that repeats the user's question. Begin directly with the content of your response. Answer the user's questions based only on the following context. 
-If the answer is not in the context, reply politely that you do not have that information available.`;
+  return `User Query: "${userMessage}"\n\nContext:\n${contextSnippets.join("\n")}\n\nPrevious User Messages:\n${formattedHistory}\n\nBased STRICTLY on the above context and conversation history, provide a detailed travel recommendation specific to ${userMessage}. IMPORTANT: Do NOT start your response with a title or heading that repeats the user's question. Begin directly with the content of your response. ONLY use information EXPLICITLY stated in the provided context snippets. DO NOT use any external knowledge or make assumptions.`;
 }

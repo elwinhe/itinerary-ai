@@ -289,10 +289,14 @@ async function processDocument(filePath: string, destination: string, type: stri
       
       // Upsert in batches
       if (vectorsToUpsert.length >= BATCH_SIZE || i === chunks.length - 1) {
-        // Create a namespace-specific index
-        const namespaceIndex = pineconeIndex.namespace(destination.toLowerCase());
-        await namespaceIndex.upsert(vectorsToUpsert);
-        console.log(`Upserted batch of ${vectorsToUpsert.length} vectors to namespace: ${destination.toLowerCase()}`);
+        const namespace = destination.toLowerCase();
+        const index = pineconeIndex.namespace(namespace);
+        await index.upsert(vectorsToUpsert.map(vector => ({
+          id: vector.id,
+          values: vector.values,
+          metadata: vector.metadata
+        })));
+        console.log(`Upserted batch of ${vectorsToUpsert.length} vectors to namespace: ${namespace}`);
         vectorsToUpsert.length = 0; // Clear the batch
       }
     }
