@@ -1,14 +1,16 @@
+/* ChatWindow.tsx */
+
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Script from 'next/script';
 import styles from './ChatWindow.module.css';
+import ResponseMessage from './ResponseMessage';
 
-// Add type declaration for Google Maps
 declare global {
   interface Window {
-    google: any; // Using any for simplicity, but you could define a more specific type
+    google: any; 
   }
 }
 
@@ -17,6 +19,7 @@ interface Message {
   content: string;
   role: 'user' | 'assistant';
   timestamp: Date;
+  namespace?: string; 
 }
 
 interface ChatHistory {
@@ -35,7 +38,6 @@ export default function ChatWindow() {
   const mapRef = useRef<HTMLDivElement>(null);
   const [mapLoaded, setMapLoaded] = useState(false);
 
-  // Auto-resize textarea as content grows
   useEffect(() => {
     if (textareaRef.current) {
       textareaRef.current.style.height = 'auto';
@@ -43,15 +45,36 @@ export default function ChatWindow() {
     }
   }, [input]);
 
-  // Initialize Google Maps when the script is loaded
   useEffect(() => {
     if (mapLoaded && mapRef.current && window.google) {
       const map = new window.google.maps.Map(mapRef.current, {
-        center: { lat: 37.7749, lng: -122.4194 }, // San Francisco
+        center: { lat: 37.7749, lng: -122.4194 },
         zoom: 12,
       });
     }
   }, [mapLoaded]);
+
+  useEffect(() => {
+    const storedMessages = localStorage.getItem('chatMessages');
+    if (storedMessages) {
+      setMessages(JSON.parse(storedMessages));
+    }
+  
+    const storedHistory = localStorage.getItem('chatHistory');
+    if (storedHistory) {
+      setChatHistory(JSON.parse(storedHistory));
+    }
+  }, []); 
+  useEffect(() => {
+    if (currentChatId) {
+      localStorage.setItem('chatMessages', JSON.stringify(messages));
+    }
+  }, [messages, currentChatId]);
+  
+  useEffect(() => {
+    localStorage.setItem('chatHistory', JSON.stringify(chatHistory));
+  }, [chatHistory]);
+  
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -67,7 +90,6 @@ export default function ChatWindow() {
     const updatedMessages = [...messages, newMessage];
     setMessages(updatedMessages);
     
-    // If this is the first message, create a new chat history entry
     if (messages.length === 0) {
       const newChatId = crypto.randomUUID();
       const newChatHistory: ChatHistory = {
@@ -79,7 +101,6 @@ export default function ChatWindow() {
       setChatHistory([newChatHistory, ...chatHistory]);
       setCurrentChatId(newChatId);
     } else if (currentChatId) {
-      // Update existing chat history
       setChatHistory(chatHistory.map(chat => 
         chat.id === currentChatId 
           ? { ...chat, messages: updatedMessages } 
@@ -88,21 +109,14 @@ export default function ChatWindow() {
     }
     
     setInput('');
-    
-    // Reset textarea height after submission
-    if (textareaRef.current) {
-      textareaRef.current.style.height = 'auto';
-    }
+
+    handleSendMessage(input);
   };
 
   const handleNewTrip = () => {
-    // Reset messages
     setMessages([]);
-    // Reset input
     setInput('');
-    // Reset current chat ID
     setCurrentChatId(null);
-    // Reset textarea height
     if (textareaRef.current) {
       textareaRef.current.style.height = 'auto';
     }
@@ -111,19 +125,88 @@ export default function ChatWindow() {
   const handleHistoryItemClick = (chatId: string) => {
     const selectedChat = chatHistory.find(chat => chat.id === chatId);
     if (selectedChat) {
-      setMessages(selectedChat.messages);
+      setMessages([...selectedChat.messages]);
       setCurrentChatId(chatId);
     }
   };
 
   async function handleSendMessage(userMessage: string) {
-    const res = await fetch('/api/chat', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: userMessage }),
-    });
-    const data = await res.json();
-    // setChatState(data.response);
+    const loadingMessage: Message = {
+      id: crypto.randomUUID(),
+      content: "...",
+      role: 'assistant',
+      timestamp: new Date(),
+    };
+
+    const newMessages = [...messages, { role: 'user', content: userMessage }];
+    
+    try {
+      setMessages(prevMessages => [...prevMessages, loadingMessage]);
+
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          message: userMessage,
+          chatHistory: messages // Send current messages as chat history
+        }),
+      });
+      
+      if (!res.ok) {
+        throw new Error('Failed to get response from API');
+      }
+      
+      const data = await res.json();
+      
+      const assistantMessage: Message = {
+        id: crypto.randomUUID(),
+        content: data.response,
+        role: 'assistant',
+        timestamp: new Date(),
+        namespace: data.namespace
+      };
+
+      setMessages(prev => {
+        const updatedMessages = [...prev.filter(msg => msg.id !== loadingMessage.id), assistantMessage];
+        
+        if (currentChatId) {
+          setChatHistory(prevHistory => 
+            prevHistory.map(chat => 
+              chat.id === currentChatId 
+                ? { ...chat, messages: updatedMessages }
+                : chat
+            )
+          );
+        }
+        return updatedMessages;
+      });    
+    } catch (error) {
+      console.error('Error sending message:', error);
+      
+      setMessages(prevMessages => {
+        const filteredMessages = prevMessages.filter(msg => msg.id !== loadingMessage.id);
+        const errorMessage: Message = {
+          id: crypto.randomUUID(),
+          content: "Sorry, I couldn't process your request. Please try again.",
+          role: 'assistant',
+          timestamp: new Date(),
+        };
+        
+        const updatedMessages = [...filteredMessages, errorMessage];
+        
+        if (currentChatId) {
+          setChatHistory(prevHistory => 
+            prevHistory.map(chat => 
+              chat.id === currentChatId 
+                ? { ...chat, messages: updatedMessages }
+                : chat
+            )
+          );
+        }
+        
+        return updatedMessages;
+      });
+    }
   }
 
   return (
@@ -179,7 +262,7 @@ export default function ChatWindow() {
           <div className={styles.messagesContainer}>
             {messages.map((message) => (
               <div
-                key={message.id}
+                key={`${message.id}-${currentChatId}`}
                 className={
                   message.role === 'user'
                     ? styles.messageUser
@@ -193,7 +276,14 @@ export default function ChatWindow() {
                       : styles.messageContentAssistant
                   }
                 >
-                  {message.content}
+                  {message.role === 'assistant' ? (
+                    <ResponseMessage 
+                      content={message.content} 
+                      namespace={message.namespace}
+                    />
+                  ) : (
+                    message.content
+                  )}
                 </div>
               </div>
             ))}
@@ -206,7 +296,7 @@ export default function ChatWindow() {
             <textarea
               ref={textareaRef}
               className={styles.inputField}
-              placeholder="Type query here"
+              placeholder="What's on your mind?"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               rows={1}
@@ -241,7 +331,7 @@ export default function ChatWindow() {
 
           {/* Buttons */}
           <div className={styles.buttonGroup}>
-            {['Example Query 1', 'Example Query 2', 'Example Query 3'].map((text, i) => (
+            {['Affordable Adventures', 'Getaway Gems', 'Exclusive Excursions'].map((text, i) => (
               <button key={i} className={styles.buttonCommon}>
                 {text}
               </button>

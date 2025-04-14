@@ -1,0 +1,79 @@
+.responseContainer {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--light-bg);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+}
+
+.namespaceIndicator {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background-color: #f3f4f6;
+  border-radius: 0.25rem;
+  display: inline-block;
+}
+
+.paragraph {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  width: 100%;
+  text-align: center;
+}
+
+.list {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  width: 100%;
+  text-align: left;
+}
+
+.listItem {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.listItem::before {
+  content: "•";
+  position: absolute;
+  left: -1rem;
+  color: var(--accent);
+}
+
+/* Highlight important information */
+.paragraph strong,
+.listItem strong {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Style links if present */
+.paragraph a,
+.listItem a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Style code blocks if present */
+.paragraph code,
+.listItem code {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-family: monospace;
+  font-size: 0.9em;
+} 
