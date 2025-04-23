@@ -96,8 +96,5 @@ This approach ensures that all recommendations are grounded in the actual datase
 The application is deployed on Vercel and can be accessed at:
 [https://perplexity-project-elwinhe.vercel.app/](https://perplexity-project-elwinhe.vercel.app/)
 
-## 📝 License
-
-This project was made for the Perplexity Take Home
 
 ## 👤 Author: Elwin He
